@@ -224,9 +224,29 @@ const hhmm = iso => new Date(iso).toLocaleTimeString([], {hour:'numeric', minute
 const fmtPx = p => p==null ? '–' : p>=1 ? p.toFixed(3) : p.toPrecision(3);
 const fmtUsd = v => v>=1e6 ? `$${(v/1e6).toFixed(1)}M` : v>=1e3 ? `$${(v/1e3).toFixed(0)}K` : `$${Math.round(v)}`;
 
+// raw.githubusercontent.com caches files on "main" for up to 5 minutes, which made
+// the page lag a whole scan behind. Instead: ask GitHub for the newest commit id
+// (a cheap check; "not changed" answers don't count against GitHub's rate limit),
+// then load the file AT that commit, which is never stale.
+let lastSha = null;
+async function latestSha(){
+  const r = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/commits/main`,
+    {headers:{Accept:'application/vnd.github.sha'}, cache:'no-cache'});
+  if(!r.ok) throw new Error('sha ' + r.status);
+  return (await r.text()).trim();
+}
 async function load(){
   try{
-    const r = await fetch(DATA_URL + (DATA_URL.includes('?')?'&':'?') + 't=' + Date.now(), {cache:'no-store'});
+    let url = DATA_URL + (DATA_URL.includes('?')?'&':'?') + 't=' + Date.now();
+    if(!params.get('data')){
+      try{
+        const sha = await latestSha();
+        if(sha === lastSha && data){ tickClock(); return; }
+        url = `https://raw.githubusercontent.com/${OWNER}/${REPO}/${sha}/data/dashboard.json`;
+        lastSha = sha;
+      }catch(e){ /* rate-limited or offline: fall back to the cached main-branch file */ }
+    }
+    const r = await fetch(url, {cache:'no-store'});
     if(!r.ok) throw new Error('HTTP '+r.status);
     data = await r.json();
     render();
