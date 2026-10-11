@@ -1,0 +1,30 @@
+name: stock-bots
+on:
+  schedule:
+    # 14:05 and 15:05 UTC on weekdays = 10:05am New York in both summer and
+    # winter time. The script skips the run that lands while the market is
+    # closed and never runs twice in one day.
+    - cron: "5 14,15 * * 1-5"
+  workflow_dispatch: {}
+permissions:
+  contents: write
+concurrency:
+  group: lab-state
+  cancel-in-progress: false
+jobs:
+  daily:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Daily signals and paper trades
+        env:
+          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+          ALPACA_API_SECRET: ${{ secrets.ALPACA_API_SECRET }}
+          MIRROR_STRATEGY: ${{ vars.MIRROR_STRATEGY }}         # optional, e.g. dual_momentum
+        run: python run_stocks.py
+      - name: Save results
+        run: bash scripts/save.sh "stocks daily"

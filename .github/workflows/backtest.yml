@@ -1,0 +1,26 @@
+name: stock-backtest
+on:
+  workflow_dispatch: {}        # run it once after setup from the Actions tab
+  schedule:
+    - cron: "0 12 1 * *"       # refresh monthly
+permissions:
+  contents: write
+concurrency:
+  group: lab-state
+  cancel-in-progress: false
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Backtest 2016-today
+        env:
+          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+          ALPACA_API_SECRET: ${{ secrets.ALPACA_API_SECRET }}
+        run: python run_backtest.py --refresh
+      - name: Save results
+        run: bash scripts/save.sh "backtest"

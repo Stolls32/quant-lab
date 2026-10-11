@@ -1,0 +1,25 @@
+name: crypto-bots
+on:
+  schedule:
+    - cron: "*/5 * * * *"     # every 5 minutes (GitHub may delay runs a few minutes at busy times)
+  workflow_dispatch: {}        # "Run workflow" button for a manual tick
+permissions:
+  contents: write
+concurrency:
+  group: lab-state             # never let two runs edit the data files at once
+  cancel-in-progress: false
+jobs:
+  tick:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: One market check
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}   # optional; enables claude_analyst
+        run: python run_crypto.py
+      - name: Save results
+        run: bash scripts/save.sh "crypto tick"
