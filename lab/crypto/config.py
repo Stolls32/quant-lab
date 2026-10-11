@@ -55,7 +55,7 @@ class EngineConfig:
     vanish_ticks: int = 3
     # A pool that loses this share of its liquidity since entry = rug pull.
     rug_liquidity_drop: float = 0.80
-    equity_log_minutes: int = 30
+    equity_log_minutes: int = 10
 
 
 @dataclass

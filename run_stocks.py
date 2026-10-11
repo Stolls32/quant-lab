@@ -13,6 +13,7 @@ import json
 import logging
 import os
 
+from lab import dashboard_data
 from lab.report import write_report
 from lab.stocks.data import Alpaca
 from lab.stocks.live import StockLab
@@ -37,6 +38,7 @@ def main() -> None:
     summary = lab.run(force=args.force, mirror=args.mirror)
     log.info("stocks: %s", json.dumps(summary, default=str))
     write_report()
+    dashboard_data.write()
 
 
 if __name__ == "__main__":

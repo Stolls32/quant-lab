@@ -13,6 +13,7 @@ import shutil
 import time
 
 from lab.crypto.engine import CryptoLab
+from lab import dashboard_data
 from lab.report import write_report
 from lab.util import setup_logging
 
@@ -40,6 +41,7 @@ def main() -> None:
             sim.advance()
             lab.tick(now=sim.now)
         write_report(crypto_dir=data_dir, stocks_dir="data/demo/stocks", out="data/demo/REPORT.md", demo=True)
+        dashboard_data.write("data/demo/dashboard.json", crypto_dir=data_dir, stocks_dir="data/demo/stocks")
         print(open("data/demo/REPORT.md", encoding="utf-8").read())
         return
 
@@ -55,6 +57,7 @@ def main() -> None:
             log.warning("No market data returned. API down or blocked? State saved; nothing traded.")
         if not args.no_report:
             write_report()
+            dashboard_data.write()
         if not args.loop:
             break
         time.sleep(max(5, args.loop - (time.time() - t0)))

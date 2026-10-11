@@ -97,6 +97,9 @@ class CryptoLab:
         if SOL_MINT not in snaps:
             # SOL always trades, so no SOL means a data outage, not dead tokens.
             # Do nothing rather than mistake an outage for a wave of rug pulls.
+            st.setdefault("recent_events", []).append({"ts": now_iso, "outage": True, "discovered": len(discovered),
+                                                       "snapshots": 0, "safe": 0, "opened": [], "closed": []})
+            del st["recent_events"][:-80]
             self.save()
             return {"discovered": len(discovered), "universe": len(set(universe)), "snapshots": 0,
                     "closed": [], "opened": [], "ai_scored": 0, "outage": True}
@@ -153,6 +156,21 @@ class CryptoLab:
                 size = min(book["cash"], book["start_cash"] * bot.size_frac)
                 if size >= ecfg.min_trade_usd:
                     self._open(bot, book, pick, size, now, now_iso, events)
+
+        # what the scanner saw this tick (for the dashboard's radar)
+        top = sorted(candidates, key=lambda c: c.snap.v("m5"), reverse=True)[:15]
+        st["last_scan"] = [{
+            "symbol": c.snap.symbol, "address": c.snap.address, "price": c.snap.price,
+            "liq": round(c.snap.liquidity), "age_h": round(c.snap.age_min / 60, 1),
+            "m5": c.snap.c("m5"), "h1": c.snap.c("h1"), "h24": c.snap.c("h24"), "vol_m5": round(c.snap.v("m5")),
+            "buys_m5": c.snap.b("m5"), "sells_m5": c.snap.s("m5"), "url": c.snap.url,
+        } for c in top]
+        st.setdefault("recent_events", []).append({
+            "ts": now_iso, "discovered": events["discovered"], "snapshots": len(snaps),
+            "safe": len(candidates), "opened": events["opened"], "closed": events["closed"],
+            "ai_scored": events["ai_scored"],
+        })
+        del st["recent_events"][:-80]
 
         # 5) AI forward-return journal
         self._update_ai_journal(snaps, now)
