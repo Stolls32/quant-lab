@@ -82,15 +82,16 @@ def build(crypto_dir: str = "data/crypto", stocks_dir: str = "data/stocks") -> d
             if name in tested:
                 rets = [float(t["ret_pct"]) for t in by_bot.get(name, [])]
                 pv = M.permutation_pvalue(rets, control)
+                has = s.n > 0  # no trades = nothing proven, so no green lights yet
                 gates = [
                     ["100+ trades", s.n >= CRYPTO_GATES["min_trades"], f"{s.n}/100"],
                     ["30+ days", days >= CRYPTO_GATES["min_days"], f"{days:.1f}/30"],
-                    ["Profitable", s.total_pnl > 0, f"${s.total_pnl:+.2f}"],
-                    ["Survives 2x costs", s.stressed_pnl > 0, f"${s.stressed_pnl:+.2f}"],
+                    ["Profitable", has and s.total_pnl > 0, f"${s.total_pnl:+.2f}"],
+                    ["Survives 2x costs", has and s.stressed_pnl > 0, f"${s.stressed_pnl:+.2f}"],
                     ["Edge CI > 0", s.n >= 2 and s.ci_low_pct > 0, f"{M.fmt(s.ci_low_pct, 1)}%"],
                     ["Beats coin flip", pv == pv and pv < p_bar, f"p={M.fmt(pv, 3)}"],
-                    ["Beats SOL", ret > sol_ret, f"{ret:+.1f}% vs {sol_ret:+.1f}%"],
-                    ["Drawdown < 40%", mdd < CRYPTO_GATES["max_drawdown_pct"], f"{mdd:.1f}%"],
+                    ["Beats SOL", has and ret > sol_ret, f"{ret:+.1f}% vs {sol_ret:+.1f}%"],
+                    ["Drawdown < 40%", has and mdd < CRYPTO_GATES["max_drawdown_pct"], f"{mdd:.1f}%"],
                 ]
             verdict = None
             if gates:

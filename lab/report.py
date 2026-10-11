@@ -85,9 +85,10 @@ def crypto_section(d: str) -> list[str]:
         rets = [float(t["ret_pct"]) for t in by_bot.get(name, [])]
         p = M.permutation_pvalue(rets, control_rets)
         mdd = M.max_drawdown([book["start_cash"], *series])
-        g = [s.n >= CRYPTO_GATES["min_trades"], days >= CRYPTO_GATES["min_days"], s.total_pnl > 0,
-             s.stressed_pnl > 0, s.n >= 2 and s.ci_low_pct > 0,
-             p == p and p < p_bar, ret > sol_ret, mdd < CRYPTO_GATES["max_drawdown_pct"]]
+        has = s.n > 0
+        g = [s.n >= CRYPTO_GATES["min_trades"], days >= CRYPTO_GATES["min_days"], has and s.total_pnl > 0,
+             has and s.stressed_pnl > 0, s.n >= 2 and s.ci_low_pct > 0,
+             p == p and p < p_bar, has and ret > sol_ret, has and mdd < CRYPTO_GATES["max_drawdown_pct"]]
         verdict = "**CANDIDATE**" if all(g) else ("collecting data" if not (g[0] and g[1]) else "no proven edge")
         L.append(f"| `{name}` | " + " | ".join(_ok(x) for x in g) + f" | {verdict} |")
     L += ["", "_Coin-flip test = permutation test of per-trade returns vs. `random_control` "
