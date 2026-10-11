@@ -6,7 +6,7 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: lab-state
+  group: stocks
   cancel-in-progress: false
 jobs:
   backtest:

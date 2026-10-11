@@ -1,25 +1,27 @@
 name: crypto-bots
 on:
   schedule:
-    - cron: "*/5 * * * *"     # every 5 minutes (GitHub may delay runs a few minutes at busy times)
-  workflow_dispatch: {}        # "Run workflow" button for a manual tick
+    # GitHub's scheduler is unreliable at 5-minute intervals, so instead each
+    # run stays alive ~5.7 hours and checks the market every 5 minutes itself.
+    # This schedule just restarts it; if one is already running, the new run
+    # waits in line instead of starting a second bot.
+    - cron: "*/30 * * * *"
+  workflow_dispatch: {}
 permissions:
   contents: write
 concurrency:
-  group: lab-state             # never let two runs edit the data files at once
+  group: crypto
   cancel-in-progress: false
 jobs:
-  tick:
+  bots:
     runs-on: ubuntu-latest
-    timeout-minutes: 6
+    timeout-minutes: 355
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: One market check
+      - name: Trade every 5 minutes (saves after each check)
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}   # optional; enables claude_analyst
-        run: python run_crypto.py
-      - name: Save results
-        run: bash scripts/save.sh "crypto tick"
+        run: python run_crypto.py --loop 300 --max-minutes 340 --save

@@ -10,6 +10,7 @@ from __future__ import annotations
 import argparse
 import logging
 import shutil
+import subprocess
 import time
 
 from lab.crypto.engine import CryptoLab
@@ -26,6 +27,8 @@ def main() -> None:
     ap.add_argument("--loop", type=int, default=0, help="seconds between live ticks; 0 = run once")
     ap.add_argument("--demo", type=int, default=0, help="run N ticks on the simulated market")
     ap.add_argument("--no-report", action="store_true")
+    ap.add_argument("--max-minutes", type=float, default=0, help="stop looping after this long (0 = forever)")
+    ap.add_argument("--save", action="store_true", help="commit + push results after every tick (GitHub Actions)")
     ap.add_argument("-v", "--verbose", action="store_true")
     args = ap.parse_args()
     setup_logging(args.verbose)
@@ -47,6 +50,7 @@ def main() -> None:
 
     from lab.crypto.market import DexScreener
     lab = CryptoLab(args.data_dir, DexScreener())
+    started = time.time()
     while True:
         t0 = time.time()
         ev = lab.tick()
@@ -58,7 +62,12 @@ def main() -> None:
         if not args.no_report:
             write_report()
             dashboard_data.write()
+        if args.save:
+            subprocess.run(["bash", "scripts/save.sh", "crypto tick"], check=False)
         if not args.loop:
+            break
+        if args.max_minutes and (time.time() - started) / 60 + args.loop / 60 > args.max_minutes:
+            log.info("time limit reached; next scheduled run takes over")
             break
         time.sleep(max(5, args.loop - (time.time() - t0)))
 
