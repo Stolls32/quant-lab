@@ -1,19 +1,19 @@
 # Quant Lab report
 
-_Updated 2026-10-11 21:23 UTC · paper money only._
+_Updated 2026-10-11 21:28 UTC · paper money only._
 
 ## Meme coins (Solana) — live paper trading
 
-Running **0.1 days** · 40 market checks · last check 2026-10-11T21:23:34Z · each bot started with $10.00
+Running **0.1 days** · 41 market checks · last check 2026-10-11T21:28:34Z · each bot started with $10.00
 
 | Bot | Equity | Return | Trades | Win % | Avg win / loss | Per-trade avg (95% CI) | Profit factor | Max DD | Open |
 |---|---:|---:|---:|---:|---|---|---:|---:|---:|
 | `claude_analyst` _(off: no API key)_ | $10.00 | +0.0% | 0 | – | – | – | – | 0.0% | 0 |
 | `dip_reclaim` | $10.00 | +0.0% | 0 | – | – | – | – | 0.0% | 0 |
-| `random_control` | $9.99 | -0.1% | 0 | – | – | – | – | 5.1% | 3 |
 | `hold_sol` | $9.75 | -2.5% | 0 | – | – | – | – | 5.3% | 1 |
-| `momentum` | $9.70 | -3.0% | 0 | – | – | – | – | 3.0% | 1 |
-| `volume_spike` | $9.55 | -4.5% | 0 | – | – | – | – | 4.9% | 1 |
+| `random_control` | $9.65 | -3.5% | 0 | – | – | – | – | 5.1% | 3 |
+| `volume_spike` | $9.58 | -4.2% | 0 | – | – | – | – | 4.9% | 1 |
+| `momentum` | $9.57 | -4.3% | 0 | – | – | – | – | 4.3% | 1 |
 | `fresh_launch` | $7.80 | -22.0% | 3 | 0 | 0.0% / -48.8% | -48.8% (-97.8 to -10.0) | 0.00 | 25.9% | 0 |
 
 ### Real-money gates (all must be ✅)
@@ -22,8 +22,8 @@ Running **0.1 days** · 40 market checks · last check 2026-10-11T21:23:34Z · e
 |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|---|
 | `claude_analyst` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
 | `dip_reclaim` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
-| `momentum` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
 | `volume_spike` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
+| `momentum` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
 | `fresh_launch` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | collecting data |
 
 _Coin-flip test = permutation test of per-trade returns vs. `random_control` (same tokens, exits and size, random entries). ✅ needs p < 0.010: 0.05 split across the 5 bots being tested, so one lucky bot out of several doesn't count as proof._
