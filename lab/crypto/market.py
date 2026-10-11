@@ -99,7 +99,8 @@ class DexScreener:
     def discover(self) -> list[str]:
         """Token addresses that are new, promoted, or trending right now."""
         found: list[str] = []
-        for path in ("/token-profiles/latest/v1", "/token-boosts/latest/v1", "/token-boosts/top/v1"):
+        for path in ("/token-profiles/latest/v1", "/token-profiles/recent-updates/v1",
+                     "/community-takeovers/latest/v1", "/token-boosts/latest/v1", "/token-boosts/top/v1"):
             try:
                 rows = http_json(BASE + path, limiter=self.slow) or []
             except (HttpError, OSError) as e:

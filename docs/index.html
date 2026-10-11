@@ -294,7 +294,7 @@ function renderBots(c){
     const ok = gates.filter(g=>g[1]).length;
     const pos = b.positions.map(p => `<a class="chip" href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.symbol)} <span class="${cls(p.ret_pct)}">${pct(p.ret_pct)}</span></a>`).join('');
     return `<div class="bot ${openBot===b.name?'open':''}" data-n="${b.name}" style="box-shadow:inset 3px 0 0 ${col}">
-      <div class="row"><div class="nm" style="color:${col}">${esc(b.name)}</div><div class="role">${LABEL[b.name] || (b.positions.length? b.positions.length+' open' : 'scanning')}</div></div>
+      <div class="row"><div class="nm" style="color:${col}">${esc(b.name)}</div><div class="role">${LABEL[b.name] || (b.positions.length? b.positions.length+' open' : 'waiting for setup')}</div></div>
       <div class="ret ${cls(b.return_pct)}">${pct(b.return_pct,1)}</div>
       <div class="eq">${money(b.equity)} equity · ${money(b.cash)} cash</div>
       ${spark(b.series, col)}
@@ -325,6 +325,7 @@ function renderFeed(c){
     if(e.outage){ html = `<span class="tag warn">DATA OUTAGE</span>market data unavailable · nothing traded`; }
     else {
       html = `<span class="mute">scanned ${e.snapshots} tokens · ${e.safe} passed safety</span>`;
+      if(!(e.opened||[]).length && !(e.closed||[]).length) html += `<br><span class="mute" style="opacity:.6">no setups matched · bots waiting</span>`;
       for(const o of e.opened||[]){ const [bot,sym,usd]=o.split(':'); html += `<br><span class="tag buy">BUY</span>${esc(bot)} → ${esc(sym)} <span class="mute">${esc(usd)}</span>`; }
       for(const o of e.closed||[]){ const [bot,sym,why,r]=o.split(':'); const v=parseFloat(r); html += `<br><span class="tag ${v>0?'win':'loss'}">SELL</span>${esc(bot)} ← ${esc(sym)} <span class="${cls(v)}">${pct(v)}</span> <span class="mute">${esc(why.replace('_',' '))}</span>`; }
       if(e.ai_scored) html += `<br><span class="tag" style="background:rgba(232,121,249,.15);color:#e879f9">AI</span>Claude scored ${e.ai_scored} setup${e.ai_scored>1?'s':''}`;
@@ -376,13 +377,20 @@ function renderStocks(s){
 function tickClock(){
   if(!data || !data.crypto) return;
   const next = new Date(data.crypto.last_tick).getTime() + 5*60000, s = Math.round((next-Date.now())/1000);
-  $('next').textContent = s > 0 ? `Next scan ~${Math.floor(s/60)}:${String(s%60).padStart(2,'0')}` : 'Next scan any moment';
+  // Each scan takes ~15s, then the result is saved to GitHub and reaches this page
+  // within about a minute, so "due" means a fresh result is on its way, not stuck.
+  $('next').textContent = s > 0 ? `Next scan ~${Math.floor(s/60)}:${String(s%60).padStart(2,'0')}`
+    : s > -150 ? 'Scanning now…' : 'Scan running late';
   const age = (Date.now() - new Date(data.crypto.last_tick))/60000;
   if(age <= 30) $('liveTxt').textContent = `Live · scanned ${ago(data.crypto.last_tick)}`;
 }
 
 load();
-setInterval(load, 60000);
+// Poll every 60s normally, every 15s once a new scan is due.
+(function poll(){
+  const due = data && data.crypto && Date.now() > new Date(data.crypto.last_tick).getTime() + 5*60000;
+  setTimeout(() => { load(); poll(); }, due ? 15000 : 60000);
+})();
 setInterval(tickClock, 1000);
 addEventListener('resize', () => data && renderChart(data.crypto));
 </script>
