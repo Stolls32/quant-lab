@@ -1,0 +1,640 @@
+{
+ "crypto": {
+  "ai": {
+   "calls_today": 0,
+   "enabled": false,
+   "groups": [
+    {
+     "avg_4h": null,
+     "label": "0-3",
+     "n": 0
+    },
+    {
+     "avg_4h": null,
+     "label": "4-6",
+     "n": 0
+    },
+    {
+     "avg_4h": null,
+     "label": "7-10",
+     "n": 0
+    }
+   ]
+  },
+  "bots": [
+   {
+    "avg_loss": 0.0,
+    "avg_win": 0.0,
+    "cash": 10.0,
+    "ci": [
+     0.0,
+     0.0
+    ],
+    "description": "Claude scores each setup 0-10 and only buys the strong ones.",
+    "enabled": false,
+    "equity": 10.0,
+    "gates": [
+     [
+      "100+ trades",
+      false,
+      "0/100"
+     ],
+     [
+      "30+ days",
+      false,
+      "0.0/30"
+     ],
+     [
+      "Profitable",
+      false,
+      "$+0.00"
+     ],
+     [
+      "Survives 2x costs",
+      false,
+      "$+0.00"
+     ],
+     [
+      "Edge CI > 0",
+      false,
+      "0.0%"
+     ],
+     [
+      "Beats coin flip",
+      false,
+      "p=\u2013"
+     ],
+     [
+      "Beats SOL",
+      true,
+      "+0.0% vs -5.3%"
+     ],
+     [
+      "Drawdown < 40%",
+      true,
+      "0.0%"
+     ]
+    ],
+    "max_dd": 0.0,
+    "mean_ret": 0.0,
+    "name": "claude_analyst",
+    "positions": [],
+    "profit_factor": 0.0,
+    "return_pct": 0.0,
+    "role": "bot",
+    "series": [
+     [
+      "2026-10-11T18:11:35Z",
+      10.0
+     ],
+     [
+      "2026-10-11T18:23:19Z",
+      10.0
+     ]
+    ],
+    "start": 10.0,
+    "trades": 0,
+    "verdict": "COLLECTING DATA",
+    "win_rate": 0.0
+   },
+   {
+    "avg_loss": 0.0,
+    "avg_win": 0.0,
+    "cash": 10.0,
+    "ci": [
+     0.0,
+     0.0
+    ],
+    "description": "Buys hard pullbacks in tokens that are up on the day, once they bounce.",
+    "enabled": true,
+    "equity": 10.0,
+    "gates": [
+     [
+      "100+ trades",
+      false,
+      "0/100"
+     ],
+     [
+      "30+ days",
+      false,
+      "0.0/30"
+     ],
+     [
+      "Profitable",
+      false,
+      "$+0.00"
+     ],
+     [
+      "Survives 2x costs",
+      false,
+      "$+0.00"
+     ],
+     [
+      "Edge CI > 0",
+      false,
+      "0.0%"
+     ],
+     [
+      "Beats coin flip",
+      false,
+      "p=\u2013"
+     ],
+     [
+      "Beats SOL",
+      true,
+      "+0.0% vs -5.3%"
+     ],
+     [
+      "Drawdown < 40%",
+      true,
+      "0.0%"
+     ]
+    ],
+    "max_dd": 0.0,
+    "mean_ret": 0.0,
+    "name": "dip_reclaim",
+    "positions": [],
+    "profit_factor": 0.0,
+    "return_pct": 0.0,
+    "role": "bot",
+    "series": [
+     [
+      "2026-10-11T18:11:35Z",
+      10.0
+     ],
+     [
+      "2026-10-11T18:23:19Z",
+      10.0
+     ]
+    ],
+    "start": 10.0,
+    "trades": 0,
+    "verdict": "COLLECTING DATA",
+    "win_rate": 0.0
+   },
+   {
+    "avg_loss": 0.0,
+    "avg_win": 0.0,
+    "cash": 10.0,
+    "ci": [
+     0.0,
+     0.0
+    ],
+    "description": "Snipes brand-new pools with strong early buying. Highest risk.",
+    "enabled": true,
+    "equity": 10.0,
+    "gates": [
+     [
+      "100+ trades",
+      false,
+      "0/100"
+     ],
+     [
+      "30+ days",
+      false,
+      "0.0/30"
+     ],
+     [
+      "Profitable",
+      false,
+      "$+0.00"
+     ],
+     [
+      "Survives 2x costs",
+      false,
+      "$+0.00"
+     ],
+     [
+      "Edge CI > 0",
+      false,
+      "0.0%"
+     ],
+     [
+      "Beats coin flip",
+      false,
+      "p=\u2013"
+     ],
+     [
+      "Beats SOL",
+      true,
+      "+0.0% vs -5.3%"
+     ],
+     [
+      "Drawdown < 40%",
+      true,
+      "0.0%"
+     ]
+    ],
+    "max_dd": 0.0,
+    "mean_ret": 0.0,
+    "name": "fresh_launch",
+    "positions": [],
+    "profit_factor": 0.0,
+    "return_pct": 0.0,
+    "role": "bot",
+    "series": [
+     [
+      "2026-10-11T18:11:35Z",
+      10.0
+     ],
+     [
+      "2026-10-11T18:23:19Z",
+      10.0
+     ]
+    ],
+    "start": 10.0,
+    "trades": 0,
+    "verdict": "COLLECTING DATA",
+    "win_rate": 0.0
+   },
+   {
+    "avg_loss": 0.0,
+    "avg_win": 0.0,
+    "cash": 10.0,
+    "ci": [
+     0.0,
+     0.0
+    ],
+    "description": "Rides tokens breaking out with real volume and more buyers than sellers.",
+    "enabled": true,
+    "equity": 10.0,
+    "gates": [
+     [
+      "100+ trades",
+      false,
+      "0/100"
+     ],
+     [
+      "30+ days",
+      false,
+      "0.0/30"
+     ],
+     [
+      "Profitable",
+      false,
+      "$+0.00"
+     ],
+     [
+      "Survives 2x costs",
+      false,
+      "$+0.00"
+     ],
+     [
+      "Edge CI > 0",
+      false,
+      "0.0%"
+     ],
+     [
+      "Beats coin flip",
+      false,
+      "p=\u2013"
+     ],
+     [
+      "Beats SOL",
+      true,
+      "+0.0% vs -5.3%"
+     ],
+     [
+      "Drawdown < 40%",
+      true,
+      "0.0%"
+     ]
+    ],
+    "max_dd": 0.0,
+    "mean_ret": 0.0,
+    "name": "momentum",
+    "positions": [],
+    "profit_factor": 0.0,
+    "return_pct": 0.0,
+    "role": "bot",
+    "series": [
+     [
+      "2026-10-11T18:11:35Z",
+      10.0
+     ],
+     [
+      "2026-10-11T18:23:19Z",
+      10.0
+     ]
+    ],
+    "start": 10.0,
+    "trades": 0,
+    "verdict": "COLLECTING DATA",
+    "win_rate": 0.0
+   },
+   {
+    "avg_loss": 0.0,
+    "avg_win": 0.0,
+    "cash": 10.0,
+    "ci": [
+     0.0,
+     0.0
+    ],
+    "description": "Jumps on sudden bursts of volume while price ticks up.",
+    "enabled": true,
+    "equity": 10.0,
+    "gates": [
+     [
+      "100+ trades",
+      false,
+      "0/100"
+     ],
+     [
+      "30+ days",
+      false,
+      "0.0/30"
+     ],
+     [
+      "Profitable",
+      false,
+      "$+0.00"
+     ],
+     [
+      "Survives 2x costs",
+      false,
+      "$+0.00"
+     ],
+     [
+      "Edge CI > 0",
+      false,
+      "0.0%"
+     ],
+     [
+      "Beats coin flip",
+      false,
+      "p=\u2013"
+     ],
+     [
+      "Beats SOL",
+      true,
+      "+0.0% vs -5.3%"
+     ],
+     [
+      "Drawdown < 40%",
+      true,
+      "0.0%"
+     ]
+    ],
+    "max_dd": 0.0,
+    "mean_ret": 0.0,
+    "name": "volume_spike",
+    "positions": [],
+    "profit_factor": 0.0,
+    "return_pct": 0.0,
+    "role": "bot",
+    "series": [
+     [
+      "2026-10-11T18:11:35Z",
+      10.0
+     ],
+     [
+      "2026-10-11T18:23:19Z",
+      10.0
+     ]
+    ],
+    "start": 10.0,
+    "trades": 0,
+    "verdict": "COLLECTING DATA",
+    "win_rate": 0.0
+   },
+   {
+    "avg_loss": 0.0,
+    "avg_win": 0.0,
+    "cash": 7.5,
+    "ci": [
+     0.0,
+     0.0
+    ],
+    "description": "The coin flip. Random entries, same exits. Everyone must beat this.",
+    "enabled": true,
+    "equity": 9.8581,
+    "gates": null,
+    "max_dd": 1.42,
+    "mean_ret": 0.0,
+    "name": "random_control",
+    "positions": [
+     {
+      "entry": 0.001145,
+      "price": 0.001145,
+      "ret_pct": 0.0,
+      "since": "2026-10-11T18:23:19Z",
+      "symbol": "SI276",
+      "url": "https://dexscreener.com/solana/12jc1dzjpzbcdakum4brakh9jcfry2tlg1ffgsl4ftcg",
+      "usd_in": 2.5
+     }
+    ],
+    "profit_factor": 0.0,
+    "return_pct": -1.42,
+    "role": "control",
+    "series": [
+     [
+      "2026-10-11T18:11:35Z",
+      10.0
+     ],
+     [
+      "2026-10-11T18:23:19Z",
+      9.8581
+     ]
+    ],
+    "start": 10.0,
+    "trades": 0,
+    "verdict": null,
+    "win_rate": 0.0
+   },
+   {
+    "avg_loss": 0.0,
+    "avg_win": 0.0,
+    "cash": 0.0,
+    "ci": [
+     0.0,
+     0.0
+    ],
+    "description": "Benchmark: bought SOL once and holds it.",
+    "enabled": true,
+    "equity": 9.474,
+    "gates": null,
+    "max_dd": 5.26,
+    "mean_ret": 0.0,
+    "name": "hold_sol",
+    "positions": [
+     {
+      "entry": 112.16,
+      "price": 111.95,
+      "ret_pct": -0.19,
+      "since": "2026-10-11T18:11:35Z",
+      "symbol": "SOL",
+      "url": "https://dexscreener.com/solana/czfq3xzzdmsdgduyrnltrhgc47cxcztlg4crryfu44ze",
+      "usd_in": 10.0
+     }
+    ],
+    "profit_factor": 0.0,
+    "return_pct": -5.26,
+    "role": "benchmark",
+    "series": [
+     [
+      "2026-10-11T18:11:35Z",
+      9.4918
+     ],
+     [
+      "2026-10-11T18:23:19Z",
+      9.474
+     ]
+    ],
+    "start": 10.0,
+    "trades": 0,
+    "verdict": null,
+    "win_rate": 0.0
+   }
+  ],
+  "days": 0.01,
+  "events": [
+   {
+    "ai_scored": 0,
+    "closed": [],
+    "discovered": 53,
+    "opened": [
+     "random_control:SI276:$2.50"
+    ],
+    "safe": 9,
+    "snapshots": 42,
+    "ts": "2026-10-11T18:23:19Z"
+   }
+  ],
+  "last_tick": "2026-10-11T18:23:19Z",
+  "p_bar": 0.01,
+  "recent_trades": [],
+  "scan": [
+   {
+    "address": "BXuuLQQsHsAjweVvTXHAgJSnTj9MLKpiK5cLP7c3wLxB",
+    "age_h": 0.9,
+    "buys_m5": 358,
+    "h1": 667.0,
+    "h24": 667.0,
+    "liq": 54625,
+    "m5": 31.2,
+    "price": 0.0003538,
+    "sells_m5": 297,
+    "symbol": "Nuts",
+    "url": "https://dexscreener.com/solana/5q4h88brnbltrqcb6s7yeoxb5skjamarz4ematkchpf5",
+    "vol_m5": 49780
+   },
+   {
+    "address": "Cs8bPDCFzGHWi1aw5ziHqvqGANQ9KNaVPDdsH2a6pump",
+    "age_h": 0.7,
+    "buys_m5": 479,
+    "h1": 175.0,
+    "h24": 175.0,
+    "liq": 32169,
+    "m5": -5.24,
+    "price": 0.0001261,
+    "sells_m5": 302,
+    "symbol": "Chada",
+    "url": "https://dexscreener.com/solana/mmcu7bsqzwj9knthyps7zkm62tcvcqqloivcaufgutt",
+    "vol_m5": 41137
+   },
+   {
+    "address": "8DAkjpoFytMqAFY4m2vTEUo6sVT65ZtMZSgNFB1Ppump",
+    "age_h": 19.7,
+    "buys_m5": 77,
+    "h1": 25.89,
+    "h24": 24.04,
+    "liq": 27460,
+    "m5": 6.36,
+    "price": 5.581e-05,
+    "sells_m5": 29,
+    "symbol": "KILOS",
+    "url": "https://dexscreener.com/solana/29kwvzhvejyyvw5y4eu3be1pb23qqztgzqhdjhjfjkqw",
+    "vol_m5": 2698
+   },
+   {
+    "address": "3qMx2ZFFxFBjYPrwCyngGXNizeAFnNBrimhPQZcjpump",
+    "age_h": 1.6,
+    "buys_m5": 25,
+    "h1": 6.79,
+    "h24": 64.37,
+    "liq": 24176,
+    "m5": 3.07,
+    "price": 8.556e-05,
+    "sells_m5": 19,
+    "symbol": "WEDNESDAY",
+    "url": "https://dexscreener.com/solana/2dexa5cxrkwpvd91tbkzlwxix52nwnqwlgvvh58zds3a",
+    "vol_m5": 1377
+   },
+   {
+    "address": "HMYd9tosnUXuNHmq7pXmoePRVBLBBjA3JBfydq6upump",
+    "age_h": 119.0,
+    "buys_m5": 22,
+    "h1": -3.01,
+    "h24": 56.14,
+    "liq": 104875,
+    "m5": -1.02,
+    "price": 0.001145,
+    "sells_m5": 20,
+    "symbol": "SI276",
+    "url": "https://dexscreener.com/solana/12jc1dzjpzbcdakum4brakh9jcfry2tlg1ffgsl4ftcg",
+    "vol_m5": 1140
+   },
+   {
+    "address": "8k4sBtEeK4pf26noKqApv8NBTnuSJcbdwpKYknk5PbAA",
+    "age_h": 582.2,
+    "buys_m5": 5,
+    "h1": 7.85,
+    "h24": 35.93,
+    "liq": 102541,
+    "m5": 14.09,
+    "price": 0.0006885,
+    "sells_m5": 11,
+    "symbol": "CALI",
+    "url": "https://dexscreener.com/solana/2i2iulr7uwk1sdrb17t5futimnfql7fyy7rh69brzihc",
+    "vol_m5": 752
+   },
+   {
+    "address": "FdZRSoq4MfUPkqAi8mipJ9UaFYu8gfDCwCfw76YZpump",
+    "age_h": 4.2,
+    "buys_m5": 9,
+    "h1": 7.36,
+    "h24": 159.0,
+    "liq": 32871,
+    "m5": 2.52,
+    "price": 0.0001303,
+    "sells_m5": 12,
+    "symbol": "Glorp",
+    "url": "https://dexscreener.com/solana/edv32pdidmufsseba9db97vzisfsrxdduq7wcprjwzep",
+    "vol_m5": 297
+   },
+   {
+    "address": "6hTLdzZaaCjmqtn7RtaEMQsCbXT5Pg8q76tRViEGpump",
+    "age_h": 211.6,
+    "buys_m5": 3,
+    "h1": -13.31,
+    "h24": 37.56,
+    "liq": 69027,
+    "m5": -1.43,
+    "price": 0.0004411,
+    "sells_m5": 4,
+    "symbol": "ABU",
+    "url": "https://dexscreener.com/solana/2qwf4dn1jnqhcpayjqnkvakezzuuig4xdnbncsk1pgcw",
+    "vol_m5": 92
+   },
+   {
+    "address": "EpFTb2XcGiMyGLykZ9VYmyPWz2AHEwAggqSbwJpypump",
+    "age_h": 1391.5,
+    "buys_m5": 0,
+    "h1": -0.26,
+    "h24": -7.18,
+    "liq": 59518,
+    "m5": 0.9,
+    "price": 0.0003029,
+    "sells_m5": 1,
+    "symbol": "Imagine",
+    "url": "https://dexscreener.com/solana/4uuzpgttnksnd8cwad3wxsxpcppxckvoywykhldfmon1",
+    "vol_m5": 61
+   }
+  ],
+  "started_at": "2026-10-11T18:11:35Z",
+  "ticks": 2,
+  "watching": 57
+ },
+ "generated_at": "2026-10-11T18:23:22Z",
+ "stocks": null
+}
