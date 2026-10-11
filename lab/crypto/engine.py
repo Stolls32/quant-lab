@@ -19,7 +19,7 @@ from datetime import datetime, timezone
 from ..ai import ClaudeScorer
 from ..util import append_csv, iso, load_json, save_json_atomic
 from . import safety
-from .config import CryptoConfig
+from .config import CostConfig, CryptoConfig
 from .costs import DexCostModel
 from .market import SOL_MINT, Snapshot
 from .strategies import ClaudeAnalyst, Context, HoldSOL, Strategy, all_strategies
@@ -39,10 +39,16 @@ class CryptoLab:
         self.market = market
         self.cfg = cfg or CryptoConfig()
         self.costs = DexCostModel(self.cfg.costs)
+        # SOL itself is extremely liquid: charging it meme-coin costs would make
+        # the benchmark look worse than it is and flatter every bot against it.
+        self.bench_costs = DexCostModel(CostConfig(fee_pct=0.3, latency_slip_pct=0.1, network_fee_usd=0.01))
         self.state_path = f"{data_dir}/state.json"
         self.state = load_json(self.state_path, {})
         self._init_state()
         self.bots = strategies or all_strategies()
+        if not self.state.get("bench_costs_v2"):  # one-time: rebuy the benchmark at fair costs
+            self.state["bots"].pop("hold_sol", None)
+            self.state["bench_costs_v2"] = True
         for b in self.bots:
             self.state["bots"].setdefault(b.name, self._new_book())
         self.scorer = scorer or ClaudeScorer(self.cfg.ai.model, self.cfg.ai.max_calls_per_day,
@@ -181,7 +187,7 @@ class CryptoLab:
             rows = []
             for bot in self.bots:
                 book = st["bots"][bot.name]
-                rows.append({"ts": now_iso, "bot": bot.name, "equity": round(self.equity(book, snaps), 6),
+                rows.append({"ts": now_iso, "bot": bot.name, "equity": round(self.equity(book, snaps, self.bench_costs if bot.is_benchmark else None), 6),
                              "cash": round(book["cash"], 6), "open_positions": len(book["positions"])})
             append_csv(f"{self.dir}/equity.csv", EQUITY_FIELDS, rows)
 
@@ -196,7 +202,7 @@ class CryptoLab:
         return not (last and now - last < bot.cooldown_min * 60)
 
     def _open(self, bot: Strategy, book: dict, s: Snapshot, usd: float, now: float, now_iso: str, events: dict):
-        fill = self.costs.buy(s.price, usd, s.liquidity)
+        fill = (self.bench_costs if bot.is_benchmark else self.costs).buy(s.price, usd, s.liquidity)
         if not fill or fill.qty <= 0:
             return
         book["cash"] -= usd
@@ -261,17 +267,18 @@ class CryptoLab:
         append_csv(f"{self.dir}/trades.csv", TRADE_FIELDS, closed)
         return closed
 
-    def equity(self, book: dict, snaps: dict) -> float:
+    def equity(self, book: dict, snaps: dict, costs: DexCostModel | None = None) -> float:
         """Cash + what the positions would fetch if sold now, after costs."""
+        costs = costs or self.costs
         total = book["cash"]
         for addr, pos in book["positions"].items():
             s = snaps.get(addr)
             if s:
-                total += self.costs.sell(s.price, pos["qty"], s.liquidity).usd
+                total += costs.sell(s.price, pos["qty"], s.liquidity).usd
             else:
                 h = self.state["hist"].get(addr)
                 if h:
-                    total += self.costs.sell(h[-1][1], pos["qty"], h[-1][2]).usd
+                    total += costs.sell(h[-1][1], pos["qty"], h[-1][2]).usd
         return total
 
     # ------------------------------------------------------------------- AI
