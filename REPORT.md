@@ -1,14 +1,14 @@
 # Quant Lab report
 
-_Updated 2026-10-12 02:54 UTC · paper money only._
+_Updated 2026-10-12 02:59 UTC · paper money only._
 
 ## Meme coins (Solana) — live paper trading
 
-Running **0.4 days** · 100 market checks · last check 2026-10-12T02:53:52Z · each bot started with $10.00
+Running **0.4 days** · 101 market checks · last check 2026-10-12T02:58:52Z · each bot started with $10.00
 
 | Bot | Equity | Return | Trades | Win % | Avg win / loss | Per-trade avg (95% CI) | Profit factor | Max DD | Open |
 |---|---:|---:|---:|---:|---|---|---:|---:|---:|
-| `fresh_launch` | $12.56 | +25.6% | 10 | 50 | 73.3% / -58.6% | 7.3% (-37.9 to 54.3) | 1.25 | 26.8% | 3 |
+| `fresh_launch` | $12.56 | +25.6% | 11 | 45 | 73.3% / -49.8% | 6.2% (-35.0 to 48.1) | 1.23 | 26.8% | 2 |
 | `claude_analyst` _(off: no API key)_ | $10.00 | +0.0% | 0 | – | – | – | – | 0.0% | 0 |
 | `dip_reclaim` | $10.00 | +0.0% | 0 | – | – | – | – | 0.0% | 0 |
 | `momentum` | $9.95 | -0.5% | 2 | 50 | 37.2% / -23.2% | 7.0% (-23.2 to 37.2) | 1.60 | 7.4% | 1 |
@@ -20,7 +20,7 @@ Running **0.4 days** · 100 market checks · last check 2026-10-12T02:53:52Z · 
 
 | Bot | 100+ trades | 30+ days | Profitable | Profitable at 2x costs | Edge CI above 0 | Beats coin flip | Beats holding SOL | Drawdown < 40% | Verdict |
 |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|---|
-| `fresh_launch` | ❌ | ❌ | ✅ | ✅ | ❌ | ❌ | ✅ | ✅ | collecting data |
+| `fresh_launch` | ❌ | ❌ | ✅ | ❌ | ❌ | ❌ | ✅ | ✅ | collecting data |
 | `claude_analyst` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
 | `dip_reclaim` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
 | `momentum` | ❌ | ❌ | ✅ | ✅ | ❌ | ❌ | ✅ | ✅ | collecting data |
@@ -32,7 +32,7 @@ _Coin-flip test = permutation test of per-trade returns vs. `random_control` (sa
 
 | Bot | take_profit | stop_loss | trailing_stop | time_exit | liquidity_pulled | vanished |
 |---|---:|---:|---:|---:|---:|---:|
-| `fresh_launch` | 4 | 2 | 2 | 0 | 2 | 0 |
+| `fresh_launch` | 4 | 2 | 3 | 0 | 2 | 0 |
 | `momentum` | 1 | 1 | 0 | 0 | 0 | 0 |
 | `random_control` | 0 | 1 | 0 | 3 | 0 | 0 |
 | `volume_spike` | 0 | 1 | 0 | 0 | 0 | 0 |
