@@ -1,27 +1,27 @@
 # Quant Lab report
 
-_Updated 2026-10-12 09:09 UTC · paper money only._
+_Updated 2026-10-12 09:14 UTC · paper money only._
 
 ## Meme coins (Solana) — live paper trading
 
-Running **0.6 days** · 175 market checks · last check 2026-10-12T09:09:09Z · each bot started with $10.00
+Running **0.6 days** · 176 market checks · last check 2026-10-12T09:14:09Z · each bot started with $10.00
 
 | Bot | Equity | Return | Trades | Win % | Avg win / loss | Per-trade avg (95% CI) | Profit factor | Max DD | Open |
 |---|---:|---:|---:|---:|---|---|---:|---:|---:|
+| `fresh_launch` | $10.93 | +9.3% | 19 | 42 | 61.8% / -44.0% | 0.5% (-26.9 to 28.8) | 1.02 | 26.8% | 2 |
 | `momentum` | $10.21 | +2.1% | 4 | 50 | 19.8% / -15.6% | 2.1% (-16.8 to 25.9) | 1.27 | 7.4% | 0 |
-| `fresh_launch` | $10.12 | +1.2% | 19 | 42 | 61.8% / -44.0% | 0.5% (-26.9 to 28.8) | 1.02 | 26.8% | 2 |
 | `claude_analyst` _(off: no API key)_ | $10.00 | +0.0% | 0 | – | – | – | – | 0.0% | 0 |
 | `dip_reclaim` | $10.00 | +0.0% | 0 | – | – | – | – | 0.0% | 0 |
-| `hold_sol` | $9.89 | -1.1% | 0 | – | – | – | – | 5.3% | 1 |
+| `hold_sol` | $9.88 | -1.2% | 0 | – | – | – | – | 5.3% | 1 |
 | `volume_spike` | $9.50 | -5.0% | 1 | 0 | 0.0% / -20.2% | -20.2% (– to –) | 0.00 | 5.0% | 0 |
-| `random_control` | $8.30 | -17.0% | 7 | 29 | 5.2% / -12.6% | -7.5% (-16.4 to 0.6) | 0.17 | 21.5% | 3 |
+| `random_control` | $8.32 | -16.8% | 7 | 29 | 5.2% / -12.6% | -7.5% (-16.4 to 0.6) | 0.17 | 21.5% | 3 |
 
 ### Real-money gates (all must be ✅)
 
 | Bot | 100+ trades | 30+ days | Profitable | Profitable at 2x costs | Edge CI above 0 | Beats coin flip | Beats holding SOL | Drawdown < 40% | Verdict |
 |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|---|
-| `momentum` | ❌ | ❌ | ✅ | ❌ | ❌ | ❌ | ✅ | ✅ | collecting data |
 | `fresh_launch` | ❌ | ❌ | ✅ | ❌ | ❌ | ❌ | ✅ | ✅ | collecting data |
+| `momentum` | ❌ | ❌ | ✅ | ❌ | ❌ | ❌ | ✅ | ✅ | collecting data |
 | `claude_analyst` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
 | `dip_reclaim` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
 | `volume_spike` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | collecting data |
