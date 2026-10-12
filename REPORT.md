@@ -1,15 +1,15 @@
 # Quant Lab report
 
-_Updated 2026-10-12 01:08 UTC · paper money only._
+_Updated 2026-10-12 01:13 UTC · paper money only._
 
 ## Meme coins (Solana) — live paper trading
 
-Running **0.3 days** · 79 market checks · last check 2026-10-12T01:08:52Z · each bot started with $10.00
+Running **0.3 days** · 80 market checks · last check 2026-10-12T01:13:52Z · each bot started with $10.00
 
 | Bot | Equity | Return | Trades | Win % | Avg win / loss | Per-trade avg (95% CI) | Profit factor | Max DD | Open |
 |---|---:|---:|---:|---:|---|---|---:|---:|---:|
+| `fresh_launch` | $11.79 | +17.9% | 8 | 50 | 91.3% / -61.4% | 14.9% (-47.1 to 68.6) | 1.49 | 26.8% | 0 |
 | `momentum` | $10.49 | +4.9% | 1 | 100 | 37.2% / 0.0% | 37.2% (– to –) | ∞ | 7.4% | 1 |
-| `fresh_launch` | $10.43 | +4.3% | 7 | 43 | 93.4% / -61.4% | 4.9% (-56.0 to 65.1) | 1.14 | 26.8% | 1 |
 | `claude_analyst` _(off: no API key)_ | $10.00 | +0.0% | 0 | – | – | – | – | 0.0% | 0 |
 | `dip_reclaim` | $10.00 | +0.0% | 0 | – | – | – | – | 0.0% | 0 |
 | `hold_sol` | $9.88 | -1.2% | 0 | – | – | – | – | 5.3% | 1 |
@@ -20,8 +20,8 @@ Running **0.3 days** · 79 market checks · last check 2026-10-12T01:08:52Z · e
 
 | Bot | 100+ trades | 30+ days | Profitable | Profitable at 2x costs | Edge CI above 0 | Beats coin flip | Beats holding SOL | Drawdown < 40% | Verdict |
 |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|---|
+| `fresh_launch` | ❌ | ❌ | ✅ | ✅ | ❌ | ❌ | ✅ | ✅ | collecting data |
 | `momentum` | ❌ | ❌ | ✅ | ✅ | ❌ | ❌ | ✅ | ✅ | collecting data |
-| `fresh_launch` | ❌ | ❌ | ✅ | ❌ | ❌ | ❌ | ✅ | ✅ | collecting data |
 | `claude_analyst` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
 | `dip_reclaim` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
 | `volume_spike` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | collecting data |
@@ -32,7 +32,7 @@ _Coin-flip test = permutation test of per-trade returns vs. `random_control` (sa
 
 | Bot | take_profit | stop_loss | trailing_stop | time_exit | liquidity_pulled | vanished |
 |---|---:|---:|---:|---:|---:|---:|
-| `fresh_launch` | 3 | 1 | 1 | 0 | 2 | 0 |
+| `fresh_launch` | 4 | 1 | 1 | 0 | 2 | 0 |
 | `momentum` | 1 | 0 | 0 | 0 | 0 | 0 |
 | `random_control` | 0 | 0 | 0 | 2 | 0 | 0 |
 | `volume_spike` | 0 | 1 | 0 | 0 | 0 | 0 |
