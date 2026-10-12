@@ -4,7 +4,7 @@ _Updated 2026-10-12 11:24 UTC · paper money only._
 
 ## Meme coins (Solana) — live paper trading
 
-Running **0.7 days** · 202 market checks · last check 2026-10-12T11:24:09Z · each bot started with $10.00
+Running **0.7 days** · 201 market checks · last check 2026-10-12T11:24:25Z · each bot started with $10.00
 
 | Bot | Equity | Return | Trades | Win % | Avg win / loss | Per-trade avg (95% CI) | Profit factor | Max DD | Open |
 |---|---:|---:|---:|---:|---|---|---:|---:|---:|
@@ -12,9 +12,9 @@ Running **0.7 days** · 202 market checks · last check 2026-10-12T11:24:09Z · 
 | `momentum` | $10.21 | +2.1% | 4 | 50 | 19.8% / -15.6% | 2.1% (-16.8 to 25.9) | 1.27 | 7.4% | 0 |
 | `claude_analyst` _(off: no API key)_ | $10.00 | +0.0% | 0 | – | – | – | – | 0.0% | 0 |
 | `dip_reclaim` | $10.00 | +0.0% | 0 | – | – | – | – | 0.0% | 0 |
-| `hold_sol` | $9.83 | -1.7% | 0 | – | – | – | – | 5.3% | 1 |
-| `volume_spike` | $9.01 | -9.9% | 1 | 0 | 0.0% / -20.2% | -20.2% (– to –) | 0.00 | 9.9% | 1 |
-| `random_control` | $8.24 | -17.6% | 7 | 29 | 5.2% / -12.6% | -7.5% (-16.4 to 0.6) | 0.17 | 21.5% | 3 |
+| `hold_sol` | $9.82 | -1.8% | 0 | – | – | – | – | 5.3% | 1 |
+| `volume_spike` | $9.50 | -5.0% | 1 | 0 | 0.0% / -20.2% | -20.2% (– to –) | 0.00 | 5.0% | 0 |
+| `random_control` | $8.26 | -17.4% | 7 | 29 | 5.2% / -12.6% | -7.5% (-16.4 to 0.6) | 0.17 | 21.5% | 3 |
 
 ### Real-money gates (all must be ✅)
 
