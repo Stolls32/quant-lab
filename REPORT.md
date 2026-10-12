@@ -1,14 +1,14 @@
 # Quant Lab report
 
-_Updated 2026-10-12 02:44 UTC · paper money only._
+_Updated 2026-10-12 02:49 UTC · paper money only._
 
 ## Meme coins (Solana) — live paper trading
 
-Running **0.4 days** · 98 market checks · last check 2026-10-12T02:43:52Z · each bot started with $10.00
+Running **0.4 days** · 99 market checks · last check 2026-10-12T02:48:52Z · each bot started with $10.00
 
 | Bot | Equity | Return | Trades | Win % | Avg win / loss | Per-trade avg (95% CI) | Profit factor | Max DD | Open |
 |---|---:|---:|---:|---:|---|---|---:|---:|---:|
-| `fresh_launch` | $12.46 | +24.6% | 8 | 50 | 91.3% / -61.4% | 14.9% (-47.1 to 68.6) | 1.49 | 26.8% | 4 |
+| `fresh_launch` | $12.46 | +24.6% | 9 | 56 | 73.3% / -61.4% | 13.4% (-38.4 to 61.7) | 1.49 | 26.8% | 4 |
 | `claude_analyst` _(off: no API key)_ | $10.00 | +0.0% | 0 | – | – | – | – | 0.0% | 0 |
 | `dip_reclaim` | $10.00 | +0.0% | 0 | – | – | – | – | 0.0% | 0 |
 | `hold_sol` | $9.91 | -0.9% | 0 | – | – | – | – | 5.3% | 1 |
@@ -32,7 +32,7 @@ _Coin-flip test = permutation test of per-trade returns vs. `random_control` (sa
 
 | Bot | take_profit | stop_loss | trailing_stop | time_exit | liquidity_pulled | vanished |
 |---|---:|---:|---:|---:|---:|---:|
-| `fresh_launch` | 4 | 1 | 1 | 0 | 2 | 0 |
+| `fresh_launch` | 4 | 1 | 2 | 0 | 2 | 0 |
 | `momentum` | 1 | 1 | 0 | 0 | 0 | 0 |
 | `random_control` | 0 | 1 | 0 | 3 | 0 | 0 |
 | `volume_spike` | 0 | 1 | 0 | 0 | 0 | 0 |
