@@ -1,10 +1,10 @@
 # Quant Lab report
 
-_Updated 2026-10-12 15:54 UTC · paper money only._
+_Updated 2026-10-12 15:59 UTC · paper money only._
 
 ## Meme coins (Solana) — live paper trading
 
-Running **0.9 days** · 255 market checks · last check 2026-10-12T15:54:25Z · each bot started with $10.00
+Running **0.9 days** · 256 market checks · last check 2026-10-12T15:59:25Z · each bot started with $10.00
 
 | Bot | Equity | Return | Trades | Win % | Avg win / loss | Per-trade avg (95% CI) | Profit factor | Max DD | Open |
 |---|---:|---:|---:|---:|---|---|---:|---:|---:|
@@ -14,7 +14,7 @@ Running **0.9 days** · 255 market checks · last check 2026-10-12T15:54:25Z · 
 | `hold_sol` | $9.64 | -3.6% | 0 | – | – | – | – | 5.3% | 1 |
 | `volume_spike` | $8.97 | -10.3% | 2 | 0 | 0.0% / -20.5% | -20.5% (-20.9 to -20.2) | 0.00 | 10.3% | 0 |
 | `momentum` | $7.94 | -20.6% | 6 | 33 | 19.8% / -30.4% | -13.7% (-38.0 to 10.8) | 0.32 | 26.9% | 0 |
-| `random_control` | $7.56 | -24.4% | 10 | 30 | 4.0% / -10.6% | -6.2% (-13.1 to -0.4) | 0.16 | 24.9% | 2 |
+| `random_control` | $7.56 | -24.4% | 11 | 27 | 4.0% / -12.3% | -7.9% (-14.4 to -1.7) | 0.12 | 24.9% | 1 |
 
 ### Real-money gates (all must be ✅)
 
@@ -34,7 +34,7 @@ _Coin-flip test = permutation test of per-trade returns vs. `random_control` (sa
 |---|---:|---:|---:|---:|---:|---:|
 | `fresh_launch` | 8 | 7 | 6 | 2 | 3 | 0 |
 | `momentum` | 1 | 3 | 2 | 0 | 0 | 0 |
-| `random_control` | 0 | 1 | 2 | 7 | 0 | 0 |
+| `random_control` | 0 | 2 | 2 | 7 | 0 | 0 |
 | `volume_spike` | 0 | 2 | 0 | 0 | 0 | 0 |
 
 </details>
