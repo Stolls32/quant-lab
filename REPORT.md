@@ -1,19 +1,19 @@
 # Quant Lab report
 
-_Updated 2026-10-13 12:10 UTC · paper money only._
+_Updated 2026-10-13 12:15 UTC · paper money only._
 
 ## Meme coins (Solana) — live paper trading
 
-Running **1.7 days** · 483 market checks · last check 2026-10-13T12:10:35Z · each bot started with $10.00
+Running **1.8 days** · 484 market checks · last check 2026-10-13T12:15:35Z · each bot started with $10.00
 
 | Bot | Equity | Return | Trades | Win % | Avg win / loss | Per-trade avg (95% CI) | Profit factor | Max DD | Open |
 |---|---:|---:|---:|---:|---|---|---:|---:|---:|
 | `claude_analyst` _(off: no API key)_ | $10.00 | +0.0% | 0 | – | – | – | – | 0.0% | 0 |
-| `dip_reclaim` | $9.92 | -0.8% | 0 | – | – | – | – | 1.8% | 1 |
+| `random_control` | $9.99 | -0.1% | 23 | 26 | 21.2% / -10.3% | -2.1% (-9.5 to 7.0) | 0.73 | 37.5% | 3 |
+| `dip_reclaim` | $9.85 | -1.5% | 0 | – | – | – | – | 1.8% | 1 |
 | `volume_spike` | $9.65 | -3.5% | 4 | 50 | 13.5% / -20.5% | -3.5% (-20.5 to 13.5) | 0.66 | 10.3% | 0 |
-| `random_control` | $9.45 | -5.5% | 23 | 26 | 21.2% / -10.3% | -2.1% (-9.5 to 7.0) | 0.73 | 37.5% | 3 |
-| `hold_sol` | $9.38 | -6.2% | 0 | – | – | – | – | 9.3% | 1 |
-| `fresh_launch` | $9.24 | -7.6% | 61 | 39 | 72.6% / -49.8% | -1.6% (-18.7 to 16.4) | 0.95 | 50.7% | 1 |
+| `hold_sol` | $9.37 | -6.3% | 0 | – | – | – | – | 9.3% | 1 |
+| `fresh_launch` | $9.29 | -7.1% | 62 | 40 | 70.2% / -49.8% | -1.4% (-18.3 to 17.1) | 0.95 | 50.7% | 0 |
 | `momentum` | $7.89 | -21.1% | 13 | 38 | 28.0% / -28.1% | -6.5% (-24.3 to 12.4) | 0.62 | 34.2% | 0 |
 
 ### Real-money gates (all must be ✅)
@@ -32,7 +32,7 @@ _Coin-flip test = permutation test of per-trade returns vs. `random_control` (sa
 
 | Bot | take_profit | stop_loss | trailing_stop | time_exit | liquidity_pulled | vanished |
 |---|---:|---:|---:|---:|---:|---:|
-| `fresh_launch` | 17 | 19 | 11 | 5 | 9 | 0 |
+| `fresh_launch` | 17 | 19 | 11 | 6 | 9 | 0 |
 | `momentum` | 3 | 5 | 5 | 0 | 0 | 0 |
 | `random_control` | 2 | 4 | 8 | 9 | 0 | 0 |
 | `volume_spike` | 1 | 2 | 1 | 0 | 0 | 0 |
