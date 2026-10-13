@@ -1,20 +1,20 @@
 # Quant Lab report
 
-_Updated 2026-10-13 22:31 UTC · paper money only._
+_Updated 2026-10-13 22:36 UTC · paper money only._
 
 ## Meme coins (Solana) — live paper trading
 
-Running **2.2 days** · 596 market checks · last check 2026-10-13T22:31:21Z · each bot started with $10.00
+Running **2.2 days** · 597 market checks · last check 2026-10-13T22:36:21Z · each bot started with $10.00
 
 | Bot | Equity | Return | Trades | Win % | Avg win / loss | Per-trade avg (95% CI) | Profit factor | Max DD | Open |
 |---|---:|---:|---:|---:|---|---|---:|---:|---:|
 | `volume_spike` | $12.55 | +25.5% | 5 | 60 | 47.7% / -20.5% | 20.4% (-15.6 to 70.3) | 3.49 | 10.3% | 0 |
 | `claude_analyst` _(off: no API key)_ | $10.00 | +0.0% | 0 | – | – | – | – | 0.0% | 0 |
-| `hold_sol` | $9.45 | -5.5% | 0 | – | – | – | – | 9.3% | 1 |
+| `hold_sol` | $9.44 | -5.6% | 0 | – | – | – | – | 9.3% | 1 |
 | `dip_reclaim` | $8.80 | -12.0% | 4 | 25 | 12.7% / -20.2% | -12.0% (-21.8 to 4.4) | 0.21 | 16.8% | 0 |
-| `random_control` | $7.93 | -20.7% | 30 | 27 | 22.8% / -12.1% | -2.8% (-9.5 to 5.0) | 0.69 | 37.5% | 2 |
+| `random_control` | $7.89 | -21.1% | 30 | 27 | 22.8% / -12.1% | -2.8% (-9.5 to 5.0) | 0.69 | 37.5% | 2 |
 | `momentum` | $6.84 | -31.6% | 14 | 36 | 28.0% / -29.6% | -9.0% (-25.2 to 9.0) | 0.53 | 37.1% | 0 |
-| `fresh_launch` | $3.31 | -66.9% | 77 | 38 | 70.3% / -52.7% | -6.4% (-22.8 to 9.9) | 0.81 | 77.7% | 2 |
+| `fresh_launch` | $3.43 | -65.7% | 78 | 37 | 70.3% / -52.4% | -6.8% (-22.6 to 9.4) | 0.79 | 77.7% | 1 |
 
 ### Real-money gates (all must be ✅)
 
@@ -33,7 +33,7 @@ _Coin-flip test = permutation test of per-trade returns vs. `random_control` (sa
 | Bot | take_profit | stop_loss | trailing_stop | time_exit | liquidity_pulled | vanished |
 |---|---:|---:|---:|---:|---:|---:|
 | `dip_reclaim` | 1 | 3 | 0 | 0 | 0 | 0 |
-| `fresh_launch` | 20 | 25 | 13 | 6 | 13 | 0 |
+| `fresh_launch` | 20 | 26 | 13 | 6 | 13 | 0 |
 | `momentum` | 3 | 6 | 5 | 0 | 0 | 0 |
 | `random_control` | 3 | 7 | 8 | 12 | 0 | 0 |
 | `volume_spike` | 2 | 2 | 1 | 0 | 0 | 0 |
