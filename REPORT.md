@@ -4,15 +4,16 @@ _Updated 2026-10-13 04:10 UTC · paper money only._
 
 ## Meme coins (Solana) — live paper trading
 
-Running **1.4 days** · 396 market checks · last check 2026-10-13T04:10:02Z · each bot started with $10.00
+Running **1.4 days** · 392 market checks · last check 2026-10-13T04:10:19Z · each bot started with $10.00
 
 | Bot | Equity | Return | Trades | Win % | Avg win / loss | Per-trade avg (95% CI) | Profit factor | Max DD | Open |
 |---|---:|---:|---:|---:|---|---|---:|---:|---:|
-| `fresh_launch` | $11.03 | +10.3% | 57 | 40 | 75.5% / -50.2% | 0.5% (-17.6 to 20.1) | 1.02 | 50.7% | 0 |
+| `fresh_launch` | $10.24 | +2.4% | 57 | 40 | 75.5% / -51.8% | -0.4% (-18.9 to 19.4) | 0.99 | 50.7% | 0 |
 | `claude_analyst` _(off: no API key)_ | $10.00 | +0.0% | 0 | – | – | – | – | 0.0% | 0 |
 | `dip_reclaim` | $10.00 | +0.0% | 0 | – | – | – | – | 0.0% | 0 |
 | `volume_spike` | $9.65 | -3.5% | 4 | 50 | 13.5% / -20.5% | -3.5% (-20.5 to 13.5) | 0.66 | 10.3% | 0 |
 | `hold_sol` | $9.52 | -4.8% | 0 | – | – | – | – | 9.3% | 1 |
+| `random_control` | $8.12 | -18.8% | 18 | 22 | 19.8% / -12.1% | -5.0% (-13.1 to 5.5) | 0.47 | 37.5% | 3 |
 | `momentum` | $7.89 | -21.1% | 13 | 38 | 28.0% / -28.1% | -6.5% (-24.3 to 12.4) | 0.62 | 34.2% | 0 |
 | `random_control` | $7.59 | -24.1% | 19 | 26 | 15.8% / -12.1% | -4.7% (-12.3 to 5.2) | 0.47 | 37.5% | 3 |
 
@@ -20,7 +21,7 @@ Running **1.4 days** · 396 market checks · last check 2026-10-13T04:10:02Z · 
 
 | Bot | 100+ trades | 30+ days | Profitable | Profitable at 2x costs | Edge CI above 0 | Beats coin flip | Beats holding SOL | Drawdown < 40% | Verdict |
 |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|---|
-| `fresh_launch` | ❌ | ❌ | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ | collecting data |
+| `fresh_launch` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ | collecting data |
 | `claude_analyst` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
 | `dip_reclaim` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
 | `volume_spike` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ | collecting data |
@@ -32,7 +33,7 @@ _Coin-flip test = permutation test of per-trade returns vs. `random_control` (sa
 
 | Bot | take_profit | stop_loss | trailing_stop | time_exit | liquidity_pulled | vanished |
 |---|---:|---:|---:|---:|---:|---:|
-| `fresh_launch` | 17 | 18 | 9 | 5 | 8 | 0 |
+| `fresh_launch` | 17 | 17 | 9 | 5 | 9 | 0 |
 | `momentum` | 3 | 5 | 5 | 0 | 0 | 0 |
 | `random_control` | 1 | 4 | 6 | 8 | 0 | 0 |
 | `volume_spike` | 1 | 2 | 1 | 0 | 0 | 0 |
