@@ -1,19 +1,19 @@
 # Quant Lab report
 
-_Updated 2026-10-13 16:01 UTC · paper money only._
+_Updated 2026-10-13 16:06 UTC · paper money only._
 
 ## Meme coins (Solana) — live paper trading
 
-Running **1.9 days** · 529 market checks · last check 2026-10-13T16:01:01Z · each bot started with $10.00
+Running **1.9 days** · 530 market checks · last check 2026-10-13T16:06:01Z · each bot started with $10.00
 
 | Bot | Equity | Return | Trades | Win % | Avg win / loss | Per-trade avg (95% CI) | Profit factor | Max DD | Open |
 |---|---:|---:|---:|---:|---|---|---:|---:|---:|
 | `claude_analyst` _(off: no API key)_ | $10.00 | +0.0% | 0 | – | – | – | – | 0.0% | 0 |
-| `random_control` | $9.78 | -2.2% | 25 | 32 | 22.8% / -10.3% | 0.3% (-7.8 to 9.3) | 1.04 | 37.5% | 3 |
+| `random_control` | $9.66 | -3.4% | 25 | 32 | 22.8% / -10.3% | 0.3% (-7.8 to 9.3) | 1.04 | 37.5% | 3 |
 | `volume_spike` | $9.65 | -3.5% | 4 | 50 | 13.5% / -20.5% | -3.5% (-20.5 to 13.5) | 0.66 | 10.3% | 0 |
+| `hold_sol` | $9.52 | -4.8% | 0 | – | – | – | – | 9.3% | 1 |
 | `dip_reclaim` | $9.48 | -5.2% | 1 | 0 | 0.0% / -20.6% | -20.6% (– to –) | 0.00 | 5.2% | 0 |
-| `hold_sol` | $9.45 | -5.5% | 0 | – | – | – | – | 9.3% | 1 |
-| `fresh_launch` | $8.71 | -12.9% | 69 | 41 | 69.2% / -51.6% | -2.6% (-19.4 to 14.2) | 0.91 | 50.7% | 1 |
+| `fresh_launch` | $8.32 | -16.8% | 69 | 41 | 69.2% / -51.6% | -2.6% (-19.4 to 14.2) | 0.91 | 50.7% | 1 |
 | `momentum` | $7.89 | -21.1% | 13 | 38 | 28.0% / -28.1% | -6.5% (-24.3 to 12.4) | 0.62 | 34.2% | 0 |
 
 ### Real-money gates (all must be ✅)
@@ -22,7 +22,7 @@ Running **1.9 days** · 529 market checks · last check 2026-10-13T16:01:01Z · 
 |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|---|
 | `claude_analyst` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
 | `volume_spike` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ | collecting data |
-| `dip_reclaim` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ | collecting data |
+| `dip_reclaim` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | collecting data |
 | `fresh_launch` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
 | `momentum` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | collecting data |
 
