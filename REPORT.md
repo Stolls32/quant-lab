@@ -1,20 +1,20 @@
 # Quant Lab report
 
-_Updated 2026-10-14 14:37 UTC · paper money only._
+_Updated 2026-10-14 14:42 UTC · paper money only._
 
 ## Meme coins (Solana) — live paper trading
 
-Running **2.9 days** · 787 market checks · last check 2026-10-14T14:37:23Z · each bot started with $10.00
+Running **2.9 days** · 788 market checks · last check 2026-10-14T14:42:23Z · each bot started with $10.00
 
 | Bot | Equity | Return | Trades | Win % | Avg win / loss | Per-trade avg (95% CI) | Profit factor | Max DD | Open |
 |---|---:|---:|---:|---:|---|---|---:|---:|---:|
 | `volume_spike` | $11.20 | +12.0% | 8 | 38 | 47.7% / -19.0% | 6.0% (-18.2 to 40.9) | 1.50 | 10.8% | 0 |
 | `claude_analyst` _(off: no API key)_ | $10.00 | +0.0% | 0 | – | – | – | – | 0.0% | 0 |
-| `hold_sol` | $9.19 | -8.1% | 0 | – | – | – | – | 9.3% | 1 |
+| `hold_sol` | $9.15 | -8.5% | 0 | – | – | – | – | 9.3% | 1 |
 | `dip_reclaim` | $8.76 | -12.4% | 5 | 20 | 12.7% / -15.5% | -9.9% (-20.9 to 2.7) | 0.20 | 16.8% | 0 |
-| `random_control` | $5.67 | -43.3% | 38 | 24 | 21.5% / -12.3% | -4.3% (-10.2 to 2.3) | 0.54 | 43.7% | 2 |
+| `random_control` | $5.69 | -43.1% | 38 | 24 | 21.5% / -12.3% | -4.3% (-10.2 to 2.3) | 0.54 | 43.7% | 2 |
 | `momentum` | $3.53 | -64.7% | 20 | 25 | 28.0% / -26.6% | -12.9% (-25.2 to -0.1) | 0.35 | 67.5% | 0 |
-| `fresh_launch` | $0.73 | -92.7% | 95 | 38 | 65.5% / -52.4% | -7.7% (-21.2 to 6.5) | 0.77 | 97.0% | 1 |
+| `fresh_launch` | $0.12 | -98.8% | 96 | 38 | 65.5% / -52.9% | -8.5% (-21.9 to 5.8) | 0.77 | 99.2% | 0 |
 
 ### Real-money gates (all must be ✅)
 
@@ -33,7 +33,7 @@ _Coin-flip test = permutation test of per-trade returns vs. `random_control` (sa
 | Bot | take_profit | stop_loss | trailing_stop | time_exit | liquidity_pulled | vanished |
 |---|---:|---:|---:|---:|---:|---:|
 | `dip_reclaim` | 1 | 3 | 1 | 0 | 0 | 0 |
-| `fresh_launch` | 23 | 34 | 15 | 9 | 14 | 0 |
+| `fresh_launch` | 23 | 35 | 15 | 9 | 14 | 0 |
 | `momentum` | 3 | 10 | 7 | 0 | 0 | 0 |
 | `random_control` | 3 | 8 | 9 | 18 | 0 | 0 |
 | `volume_spike` | 2 | 4 | 2 | 0 | 0 | 0 |
