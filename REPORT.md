@@ -1,19 +1,19 @@
 # Quant Lab report
 
-_Updated 2026-10-14 19:42 UTC · paper money only._
+_Updated 2026-10-14 19:47 UTC · paper money only._
 
 ## Meme coins (Solana) — live paper trading
 
-Running **3.1 days** · 841 market checks · last check 2026-10-14T19:42:47Z · each bot started with $10.00
+Running **3.1 days** · 842 market checks · last check 2026-10-14T19:47:47Z · each bot started with $10.00
 
 | Bot | Equity | Return | Trades | Win % | Avg win / loss | Per-trade avg (95% CI) | Profit factor | Max DD | Open |
 |---|---:|---:|---:|---:|---|---|---:|---:|---:|
-| `volume_spike` | $11.08 | +10.8% | 9 | 33 | 47.7% / -19.7% | 2.8% (-19.0 to 34.8) | 1.21 | 11.7% | 1 |
+| `volume_spike` | $11.11 | +11.1% | 9 | 33 | 47.7% / -19.7% | 2.8% (-19.0 to 34.8) | 1.21 | 11.7% | 1 |
 | `claude_analyst` _(off: no API key)_ | $10.00 | +0.0% | 0 | – | – | – | – | 0.0% | 0 |
-| `hold_sol` | $9.22 | -7.8% | 0 | – | – | – | – | 9.3% | 1 |
+| `hold_sol` | $9.20 | -8.0% | 0 | – | – | – | – | 9.3% | 1 |
 | `dip_reclaim` | $8.76 | -12.4% | 5 | 20 | 12.7% / -15.5% | -9.9% (-20.9 to 2.7) | 0.20 | 16.8% | 0 |
-| `random_control` | $5.50 | -45.0% | 40 | 22 | 21.5% / -12.1% | -4.5% (-10.1 to 1.9) | 0.52 | 50.6% | 3 |
-| `momentum` | $3.44 | -65.6% | 20 | 25 | 28.0% / -26.6% | -12.9% (-25.2 to -0.1) | 0.35 | 72.4% | 2 |
+| `random_control` | $5.38 | -46.2% | 40 | 22 | 21.5% / -12.1% | -4.5% (-10.1 to 1.9) | 0.52 | 50.6% | 3 |
+| `momentum` | $2.70 | -73.0% | 21 | 24 | 28.0% / -26.9% | -13.8% (-25.7 to -0.6) | 0.33 | 75.1% | 1 |
 | `fresh_launch` | $0.12 | -98.8% | 96 | 38 | 65.5% / -52.9% | -8.5% (-21.9 to 5.8) | 0.77 | 99.2% | 0 |
 
 ### Real-money gates (all must be ✅)
@@ -34,7 +34,7 @@ _Coin-flip test = permutation test of per-trade returns vs. `random_control` (sa
 |---|---:|---:|---:|---:|---:|---:|
 | `dip_reclaim` | 1 | 3 | 1 | 0 | 0 | 0 |
 | `fresh_launch` | 23 | 35 | 15 | 9 | 14 | 0 |
-| `momentum` | 3 | 10 | 7 | 0 | 0 | 0 |
+| `momentum` | 3 | 11 | 7 | 0 | 0 | 0 |
 | `random_control` | 3 | 8 | 9 | 20 | 0 | 0 |
 | `volume_spike` | 2 | 5 | 2 | 0 | 0 | 0 |
 
