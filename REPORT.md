@@ -1,14 +1,14 @@
 # Quant Lab report
 
-_Updated 2026-10-14 20:57 UTC · paper money only._
+_Updated 2026-10-14 21:02 UTC · paper money only._
 
 ## Meme coins (Solana) — live paper trading
 
-Running **3.1 days** · 856 market checks · last check 2026-10-14T20:57:47Z · each bot started with $10.00
+Running **3.1 days** · 857 market checks · last check 2026-10-14T21:02:47Z · each bot started with $10.00
 
 | Bot | Equity | Return | Trades | Win % | Avg win / loss | Per-trade avg (95% CI) | Profit factor | Max DD | Open |
 |---|---:|---:|---:|---:|---|---|---:|---:|---:|
-| `volume_spike` | $10.64 | +6.4% | 10 | 30 | 47.7% / -18.2% | 1.6% (-18.1 to 29.6) | 1.13 | 15.2% | 3 |
+| `volume_spike` | $10.64 | +6.4% | 11 | 27 | 47.7% / -20.5% | -1.9% (-20.9 to 25.3) | 0.87 | 15.2% | 2 |
 | `claude_analyst` _(off: no API key)_ | $10.00 | +0.0% | 0 | – | – | – | – | 0.0% | 0 |
 | `hold_sol` | $9.21 | -7.9% | 0 | – | – | – | – | 9.3% | 1 |
 | `dip_reclaim` | $8.76 | -12.4% | 5 | 20 | 12.7% / -15.5% | -9.9% (-20.9 to 2.7) | 0.20 | 16.8% | 0 |
@@ -20,7 +20,7 @@ Running **3.1 days** · 856 market checks · last check 2026-10-14T20:57:47Z · 
 
 | Bot | 100+ trades | 30+ days | Profitable | Profitable at 2x costs | Edge CI above 0 | Beats coin flip | Beats holding SOL | Drawdown < 40% | Verdict |
 |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|---|
-| `volume_spike` | ❌ | ❌ | ✅ | ❌ | ❌ | ❌ | ✅ | ✅ | collecting data |
+| `volume_spike` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ | collecting data |
 | `claude_analyst` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
 | `dip_reclaim` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | collecting data |
 | `momentum` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
@@ -36,7 +36,7 @@ _Coin-flip test = permutation test of per-trade returns vs. `random_control` (sa
 | `fresh_launch` | 23 | 35 | 15 | 9 | 14 | 0 |
 | `momentum` | 3 | 11 | 7 | 0 | 1 | 0 |
 | `random_control` | 3 | 8 | 9 | 20 | 0 | 0 |
-| `volume_spike` | 2 | 5 | 3 | 0 | 0 | 0 |
+| `volume_spike` | 2 | 6 | 3 | 0 | 0 | 0 |
 
 </details>
 
