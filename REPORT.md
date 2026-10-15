@@ -1,18 +1,18 @@
 # Quant Lab report
 
-_Updated 2026-10-15 18:44 UTC · paper money only._
+_Updated 2026-10-15 18:49 UTC · paper money only._
 
 ## Meme coins (Solana) — live paper trading
 
-Running **4.0 days** · 1,101 market checks · last check 2026-10-15T18:44:11Z · each bot started with $10.00
+Running **4.0 days** · 1,102 market checks · last check 2026-10-15T18:49:11Z · each bot started with $10.00
 
 | Bot | Equity | Return | Trades | Win % | Avg win / loss | Per-trade avg (95% CI) | Profit factor | Max DD | Open |
 |---|---:|---:|---:|---:|---|---|---:|---:|---:|
+| `volume_spike` | $10.20 | +2.0% | 17 | 35 | 38.0% / -21.9% | -0.8% (-16.8 to 18.8) | 0.95 | 36.1% | 1 |
 | `claude_analyst` _(off: no API key)_ | $10.00 | +0.0% | 0 | – | – | – | – | 0.0% | 0 |
-| `volume_spike` | $9.99 | -0.1% | 17 | 35 | 38.0% / -21.9% | -0.8% (-16.8 to 18.8) | 0.95 | 36.1% | 1 |
-| `hold_sol` | $9.33 | -6.7% | 0 | – | – | – | – | 10.5% | 1 |
+| `hold_sol` | $9.36 | -6.4% | 0 | – | – | – | – | 10.5% | 1 |
 | `dip_reclaim` | $8.87 | -11.3% | 6 | 33 | 13.4% / -15.5% | -5.9% (-17.6 to 6.1) | 0.43 | 16.8% | 1 |
-| `random_control` | $6.31 | -36.9% | 57 | 28 | 22.4% / -12.4% | -2.6% (-7.9 to 3.1) | 0.72 | 51.1% | 1 |
+| `random_control` | $6.33 | -36.7% | 57 | 28 | 22.4% / -12.4% | -2.6% (-7.9 to 3.1) | 0.72 | 51.1% | 1 |
 | `momentum` | $0.48 | -95.2% | 32 | 28 | 24.4% / -30.3% | -14.9% (-25.4 to -3.6) | 0.31 | 95.6% | 0 |
 | `fresh_launch` | $0.12 | -98.8% | 96 | 38 | 65.5% / -52.9% | -8.5% (-21.9 to 5.8) | 0.77 | 99.2% | 0 |
 
@@ -20,8 +20,8 @@ Running **4.0 days** · 1,101 market checks · last check 2026-10-15T18:44:11Z �
 
 | Bot | 100+ trades | 30+ days | Profitable | Profitable at 2x costs | Edge CI above 0 | Beats coin flip | Beats holding SOL | Drawdown < 40% | Verdict |
 |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|---|
-| `claude_analyst` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
 | `volume_spike` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ | collecting data |
+| `claude_analyst` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
 | `dip_reclaim` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | collecting data |
 | `momentum` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
 | `fresh_launch` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
