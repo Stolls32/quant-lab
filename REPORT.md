@@ -1,18 +1,18 @@
 # Quant Lab report
 
-_Updated 2026-10-15 16:53 UTC · paper money only._
+_Updated 2026-10-15 16:58 UTC · paper money only._
 
 ## Meme coins (Solana) — live paper trading
 
-Running **3.9 days** · 1,085 market checks · last check 2026-10-15T16:53:49Z · each bot started with $10.00
+Running **3.9 days** · 1,086 market checks · last check 2026-10-15T16:58:49Z · each bot started with $10.00
 
 | Bot | Equity | Return | Trades | Win % | Avg win / loss | Per-trade avg (95% CI) | Profit factor | Max DD | Open |
 |---|---:|---:|---:|---:|---|---|---:|---:|---:|
 | `claude_analyst` _(off: no API key)_ | $10.00 | +0.0% | 0 | – | – | – | – | 0.0% | 0 |
-| `hold_sol` | $9.35 | -6.5% | 0 | – | – | – | – | 10.5% | 1 |
+| `hold_sol` | $9.34 | -6.6% | 0 | – | – | – | – | 10.5% | 1 |
 | `dip_reclaim` | $9.12 | -8.8% | 6 | 33 | 13.4% / -15.5% | -5.9% (-17.6 to 6.1) | 0.43 | 16.8% | 0 |
 | `volume_spike` | $8.77 | -12.3% | 16 | 31 | 33.8% / -21.9% | -4.5% (-19.6 to 15.0) | 0.70 | 36.1% | 0 |
-| `random_control` | $6.27 | -37.3% | 57 | 28 | 22.4% / -12.4% | -2.6% (-7.9 to 3.1) | 0.72 | 51.1% | 1 |
+| `random_control` | $6.22 | -37.8% | 57 | 28 | 22.4% / -12.4% | -2.6% (-7.9 to 3.1) | 0.72 | 51.1% | 1 |
 | `momentum` | $0.48 | -95.2% | 32 | 28 | 24.4% / -30.3% | -14.9% (-25.4 to -3.6) | 0.31 | 95.6% | 0 |
 | `fresh_launch` | $0.12 | -98.8% | 96 | 38 | 65.5% / -52.9% | -8.5% (-21.9 to 5.8) | 0.77 | 99.2% | 0 |
 
