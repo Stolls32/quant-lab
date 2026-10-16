@@ -1,16 +1,16 @@
 # Quant Lab report
 
-_Updated 2026-10-16 16:55 UTC · paper money only._
+_Updated 2026-10-16 17:00 UTC · paper money only._
 
 ## Meme coins (Solana) — live paper trading
 
-Running **4.9 days** · 1,351 market checks · last check 2026-10-16T16:55:35Z · each bot started with $10.00
+Running **5.0 days** · 1,352 market checks · last check 2026-10-16T17:00:35Z · each bot started with $10.00
 
 | Bot | Equity | Return | Trades | Win % | Avg win / loss | Per-trade avg (95% CI) | Profit factor | Max DD | Open |
 |---|---:|---:|---:|---:|---|---|---:|---:|---:|
 | `claude_analyst` _(off: no API key)_ | $10.00 | +0.0% | 0 | – | – | – | – | 0.0% | 0 |
 | `volume_spike` | $9.81 | -1.9% | 20 | 35 | 37.0% / -22.3% | -1.5% (-15.9 to 16.1) | 0.89 | 36.1% | 0 |
-| `dip_reclaim` | $9.75 | -2.5% | 7 | 43 | 22.9% / -15.5% | 0.9% (-14.7 to 17.4) | 1.10 | 16.8% | 1 |
+| `dip_reclaim` | $9.75 | -2.5% | 8 | 38 | 22.9% / -16.2% | -1.5% (-15.6 to 13.7) | 0.85 | 16.8% | 0 |
 | `hold_sol` | $9.20 | -8.0% | 0 | – | – | – | – | 10.5% | 1 |
 | `random_control` | $3.34 | -66.6% | 71 | 27 | 23.7% / -14.0% | -3.9% (-8.7 to 1.2) | 0.62 | 66.8% | 1 |
 | `momentum` | $0.48 | -95.2% | 32 | 28 | 24.4% / -30.3% | -14.9% (-25.4 to -3.6) | 0.31 | 95.6% | 0 |
@@ -22,7 +22,7 @@ Running **4.9 days** · 1,351 market checks · last check 2026-10-16T16:55:35Z �
 |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|---|
 | `claude_analyst` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
 | `volume_spike` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ | collecting data |
-| `dip_reclaim` | ❌ | ❌ | ✅ | ❌ | ❌ | ❌ | ✅ | ✅ | collecting data |
+| `dip_reclaim` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ | collecting data |
 | `momentum` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
 | `fresh_launch` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
 
@@ -32,7 +32,7 @@ _Coin-flip test = permutation test of per-trade returns vs. `random_control` (sa
 
 | Bot | take_profit | stop_loss | trailing_stop | time_exit | liquidity_pulled | vanished |
 |---|---:|---:|---:|---:|---:|---:|
-| `dip_reclaim` | 3 | 3 | 1 | 0 | 0 | 0 |
+| `dip_reclaim` | 3 | 4 | 1 | 0 | 0 | 0 |
 | `fresh_launch` | 23 | 35 | 15 | 9 | 14 | 0 |
 | `momentum` | 5 | 17 | 9 | 0 | 1 | 0 |
 | `random_control` | 8 | 18 | 14 | 31 | 0 | 0 |
