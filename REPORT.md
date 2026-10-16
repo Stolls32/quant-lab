@@ -1,17 +1,17 @@
 # Quant Lab report
 
-_Updated 2026-10-16 16:40 UTC · paper money only._
+_Updated 2026-10-16 16:45 UTC · paper money only._
 
 ## Meme coins (Solana) — live paper trading
 
-Running **4.9 days** · 1,348 market checks · last check 2026-10-16T16:40:35Z · each bot started with $10.00
+Running **4.9 days** · 1,349 market checks · last check 2026-10-16T16:45:35Z · each bot started with $10.00
 
 | Bot | Equity | Return | Trades | Win % | Avg win / loss | Per-trade avg (95% CI) | Profit factor | Max DD | Open |
 |---|---:|---:|---:|---:|---|---|---:|---:|---:|
-| `dip_reclaim` | $10.06 | +0.6% | 7 | 43 | 22.9% / -15.5% | 0.9% (-14.7 to 17.4) | 1.10 | 16.8% | 1 |
 | `claude_analyst` _(off: no API key)_ | $10.00 | +0.0% | 0 | – | – | – | – | 0.0% | 0 |
+| `dip_reclaim` | $9.99 | -0.1% | 7 | 43 | 22.9% / -15.5% | 0.9% (-14.7 to 17.4) | 1.10 | 16.8% | 1 |
 | `volume_spike` | $9.81 | -1.9% | 20 | 35 | 37.0% / -22.3% | -1.5% (-15.9 to 16.1) | 0.89 | 36.1% | 0 |
-| `hold_sol` | $9.22 | -7.8% | 0 | – | – | – | – | 10.5% | 1 |
+| `hold_sol` | $9.24 | -7.6% | 0 | – | – | – | – | 10.5% | 1 |
 | `random_control` | $3.35 | -66.5% | 71 | 27 | 23.7% / -14.0% | -3.9% (-8.7 to 1.2) | 0.62 | 66.8% | 1 |
 | `momentum` | $0.48 | -95.2% | 32 | 28 | 24.4% / -30.3% | -14.9% (-25.4 to -3.6) | 0.31 | 95.6% | 0 |
 | `fresh_launch` | $0.12 | -98.8% | 96 | 38 | 65.5% / -52.9% | -8.5% (-21.9 to 5.8) | 0.77 | 99.2% | 0 |
@@ -20,8 +20,8 @@ Running **4.9 days** · 1,348 market checks · last check 2026-10-16T16:40:35Z �
 
 | Bot | 100+ trades | 30+ days | Profitable | Profitable at 2x costs | Edge CI above 0 | Beats coin flip | Beats holding SOL | Drawdown < 40% | Verdict |
 |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|---|
-| `dip_reclaim` | ❌ | ❌ | ✅ | ❌ | ❌ | ❌ | ✅ | ✅ | collecting data |
 | `claude_analyst` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
+| `dip_reclaim` | ❌ | ❌ | ✅ | ❌ | ❌ | ❌ | ✅ | ✅ | collecting data |
 | `volume_spike` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ | collecting data |
 | `momentum` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
 | `fresh_launch` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
