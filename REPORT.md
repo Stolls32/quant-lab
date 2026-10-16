@@ -1,18 +1,18 @@
 # Quant Lab report
 
-_Updated 2026-10-16 18:20 UTC · paper money only._
+_Updated 2026-10-16 18:25 UTC · paper money only._
 
 ## Meme coins (Solana) — live paper trading
 
-Running **5.0 days** · 1,368 market checks · last check 2026-10-16T18:20:35Z · each bot started with $10.00
+Running **5.0 days** · 1,369 market checks · last check 2026-10-16T18:25:35Z · each bot started with $10.00
 
 | Bot | Equity | Return | Trades | Win % | Avg win / loss | Per-trade avg (95% CI) | Profit factor | Max DD | Open |
 |---|---:|---:|---:|---:|---|---|---:|---:|---:|
 | `claude_analyst` _(off: no API key)_ | $10.00 | +0.0% | 0 | – | – | – | – | 0.0% | 0 |
-| `volume_spike` | $9.81 | -1.9% | 20 | 35 | 37.0% / -22.3% | -1.5% (-15.9 to 16.1) | 0.89 | 36.1% | 1 |
 | `dip_reclaim` | $9.69 | -3.1% | 8 | 38 | 22.9% / -16.2% | -1.5% (-15.6 to 13.7) | 0.85 | 16.8% | 0 |
-| `hold_sol` | $9.19 | -8.1% | 0 | – | – | – | – | 10.5% | 1 |
-| `random_control` | $3.24 | -67.6% | 71 | 27 | 23.7% / -14.0% | -3.9% (-8.7 to 1.2) | 0.62 | 68.4% | 2 |
+| `volume_spike` | $9.27 | -7.3% | 21 | 33 | 37.0% / -22.2% | -2.5% (-16.6 to 14.7) | 0.83 | 36.1% | 0 |
+| `hold_sol` | $9.20 | -8.0% | 0 | – | – | – | – | 10.5% | 1 |
+| `random_control` | $3.22 | -67.8% | 71 | 27 | 23.7% / -14.0% | -3.9% (-8.7 to 1.2) | 0.62 | 68.4% | 2 |
 | `momentum` | $0.48 | -95.2% | 32 | 28 | 24.4% / -30.3% | -14.9% (-25.4 to -3.6) | 0.31 | 95.6% | 0 |
 | `fresh_launch` | $0.12 | -98.8% | 96 | 38 | 65.5% / -52.9% | -8.5% (-21.9 to 5.8) | 0.77 | 99.2% | 0 |
 
@@ -21,8 +21,8 @@ Running **5.0 days** · 1,368 market checks · last check 2026-10-16T18:20:35Z �
 | Bot | 100+ trades | 30+ days | Profitable | Profitable at 2x costs | Edge CI above 0 | Beats coin flip | Beats holding SOL | Drawdown < 40% | Verdict |
 |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|---|
 | `claude_analyst` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
-| `volume_spike` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ | collecting data |
 | `dip_reclaim` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ | collecting data |
+| `volume_spike` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ | collecting data |
 | `momentum` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
 | `fresh_launch` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
 
@@ -36,7 +36,7 @@ _Coin-flip test = permutation test of per-trade returns vs. `random_control` (sa
 | `fresh_launch` | 23 | 35 | 15 | 9 | 14 | 0 |
 | `momentum` | 5 | 17 | 9 | 0 | 1 | 0 |
 | `random_control` | 8 | 18 | 14 | 31 | 0 | 0 |
-| `volume_spike` | 5 | 10 | 3 | 2 | 0 | 0 |
+| `volume_spike` | 5 | 11 | 3 | 2 | 0 | 0 |
 
 </details>
 
