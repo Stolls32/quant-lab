@@ -1711,8 +1711,8 @@
     "positions": [
      {
       "entry": 111.93,
-      "price": 103.94,
-      "ret_pct": -7.14,
+      "price": 103.99,
+      "ret_pct": -7.09,
       "since": "2026-10-11T18:27:18Z",
       "symbol": "SOL",
       "url": "https://dexscreener.com/solana/czfq3xzzdmsdgduyrnltrhgc47cxcztlg4crryfu44ze",
@@ -3334,12 +3334,12 @@
     "win_rate": 0.0
    },
    {
-    "avg_loss": -22.23,
+    "avg_loss": -22.18,
     "avg_win": 35.11,
-    "cash": 3.6791,
+    "cash": 5.6638,
     "ci": [
-     -14.1,
-     5.38
+     -14.19,
+     4.59
     ],
     "description": "Jumps on sudden bursts of volume while price ticks up.",
     "enabled": true,
@@ -3348,7 +3348,7 @@
      [
       "100+ trades",
       false,
-      "43/100"
+      "44/100"
      ],
      [
       "30+ days",
@@ -3358,22 +3358,22 @@
      [
       "Profitable",
       false,
-      "$-4.97"
+      "$-5.48"
      ],
      [
       "Survives 2x costs",
       false,
-      "$-11.02"
+      "$-11.67"
      ],
      [
       "Edge CI > 0",
       false,
-      "-14.1%"
+      "-14.2%"
      ],
      [
       "Beats coin flip",
       false,
-      "p=0.691"
+      "p=0.722"
      ],
      [
       "Beats SOL",
@@ -3387,20 +3387,10 @@
      ]
     ],
     "max_dd": 67.0,
-    "mean_ret": -4.89,
+    "mean_ret": -5.25,
     "name": "volume_spike",
-    "positions": [
-     {
-      "entry": 0.0187,
-      "price": 0.01692,
-      "ret_pct": -9.52,
-      "since": "2026-10-22T08:49:08Z",
-      "symbol": "OA",
-      "url": "https://dexscreener.com/solana/2ouubdtw81shryhw6yyn1zuqzx28exxi8s6f7bxvcbnq",
-      "usd_in": 2.5
-     }
-    ],
-    "profit_factor": 0.7,
+    "positions": [],
+    "profit_factor": 0.67,
     "return_pct": -41.88,
     "role": "bot",
     "series": [
@@ -5010,9 +5000,9 @@
      ]
     ],
     "start": 10.0,
-    "trades": 43,
+    "trades": 44,
     "verdict": "COLLECTING DATA",
-    "win_rate": 30.2
+    "win_rate": 29.5
    },
    {
     "avg_loss": -18.4,
@@ -6703,8 +6693,8 @@
     "positions": [
      {
       "entry": 0.002609,
-      "price": 0.003299,
-      "ret_pct": 26.45,
+      "price": 0.003224,
+      "ret_pct": 23.57,
       "since": "2026-10-22T06:29:08Z",
       "symbol": "GATO",
       "url": "https://dexscreener.com/solana/5e3dxlxgwmtdcoka51wyyakttjfzbwqcoyuhbui5gt2m",
@@ -11672,6 +11662,17 @@
   "events": [
    {
     "ai_scored": 0,
+    "closed": [
+     "volume_spike:OA:stop_loss:-20.614%"
+    ],
+    "discovered": 84,
+    "opened": [],
+    "safe": 17,
+    "snapshots": 123,
+    "ts": "2026-10-22T09:54:08Z"
+   },
+   {
+    "ai_scored": 0,
     "closed": [],
     "discovered": 84,
     "opened": [],
@@ -12022,20 +12023,21 @@
     "safe": 20,
     "snapshots": 147,
     "ts": "2026-10-22T06:39:08Z"
-   },
-   {
-    "ai_scored": 0,
-    "closed": [],
-    "discovered": 90,
-    "opened": [],
-    "safe": 20,
-    "snapshots": 149,
-    "ts": "2026-10-22T06:34:08Z"
    }
   ],
-  "last_tick": "2026-10-22T09:49:08Z",
+  "last_tick": "2026-10-22T09:54:08Z",
   "p_bar": 0.01,
   "recent_trades": [
+   {
+    "bot": "volume_spike",
+    "closed_at": "2026-10-22T09:54:08Z",
+    "exit_reason": "stop_loss",
+    "hold_min": "65.0",
+    "pnl_usd": "-0.515342",
+    "ret_pct": "-20.614",
+    "symbol": "OA",
+    "url": "https://dexscreener.com/solana/2ouubdtw81shryhw6yyn1zuqzx28exxi8s6f7bxvcbnq"
+   },
    {
     "bot": "random_control",
     "closed_at": "2026-10-22T06:09:08Z",
@@ -12625,234 +12627,224 @@
     "ret_pct": "12.225",
     "symbol": "DRMR",
     "url": "https://dexscreener.com/solana/4wbt5gf46kct9dhznfvtaen5pnfr56u5htpw27tvytvv"
-   },
-   {
-    "bot": "volume_spike",
-    "closed_at": "2026-10-18T01:02:17Z",
-    "exit_reason": "stop_loss",
-    "hold_min": "5.0",
-    "pnl_usd": "-0.624836",
-    "ret_pct": "-24.993",
-    "symbol": "Eternia",
-    "url": "https://dexscreener.com/solana/abqxgs5c78p8nix49kqsbtnqjammahcbh2mvjq1zqqz2"
    }
   ],
   "scan": [
    {
-    "address": "EHPugw1ghE46BeySAa7cHvoZHwYometbp1aK1Q7jpump",
-    "age_h": 44.7,
-    "buys_m5": 463,
-    "h1": -9.62,
-    "h24": -39.66,
-    "liq": 57312,
-    "m5": 3.4,
-    "price": 0.0003388,
-    "sells_m5": 246,
-    "symbol": "MONEYBIZ",
-    "url": "https://dexscreener.com/solana/gs1bqcy4w3scfjmo5ch9c1xggbuqnpvjowy7yc7pjgdl",
-    "vol_m5": 47968
+    "address": "NXFxRtXTXsupes3WvK51zV3eUYi7u1iCSbcqd15pump",
+    "age_h": 0.5,
+    "buys_m5": 206,
+    "h1": 130.0,
+    "h24": 130.0,
+    "liq": 27011,
+    "m5": -22.81,
+    "price": 0.0001103,
+    "sells_m5": 199,
+    "symbol": "SHAV",
+    "url": "https://dexscreener.com/solana/dqeov95i5mbomdnp3ctcgdvfcv727zpntcwg9ifxzzqu",
+    "vol_m5": 26496
    },
    {
     "address": "4vT4trZuQpoPxBAKNwBF4gVhZdy6UCUqxeeYNmuQtfQd",
-    "age_h": 0.5,
-    "buys_m5": 401,
-    "h1": 145.0,
-    "h24": 145.0,
-    "liq": 27818,
-    "m5": -9.52,
-    "price": 0.0001069,
-    "sells_m5": 293,
+    "age_h": 0.6,
+    "buys_m5": 262,
+    "h1": 125.0,
+    "h24": 125.0,
+    "liq": 26162,
+    "m5": -2.86,
+    "price": 9.838e-05,
+    "sells_m5": 154,
     "symbol": "SHAV",
     "url": "https://dexscreener.com/solana/7f5pz3mgwtv9pkp6j7vnbnrw374ldrtjdy9nqmz7nqtm",
-    "vol_m5": 40747
+    "vol_m5": 18741
    },
    {
-    "address": "NXFxRtXTXsupes3WvK51zV3eUYi7u1iCSbcqd15pump",
-    "age_h": 0.4,
-    "buys_m5": 168,
-    "h1": 147.0,
-    "h24": 147.0,
-    "liq": 28468,
-    "m5": 3.5,
-    "price": 0.0001187,
-    "sells_m5": 163,
-    "symbol": "SHAV",
-    "url": "https://dexscreener.com/solana/dqeov95i5mbomdnp3ctcgdvfcv727zpntcwg9ifxzzqu",
-    "vol_m5": 19836
+    "address": "Hx4cDZzRjfCNeqZCLS8sR4uwPRH5NVVrE4PF9Fugpump",
+    "age_h": 6.7,
+    "buys_m5": 61,
+    "h1": 45.96,
+    "h24": 49.53,
+    "liq": 22211,
+    "m5": -22.12,
+    "price": 6.527e-05,
+    "sells_m5": 50,
+    "symbol": "NOOX",
+    "url": "https://dexscreener.com/solana/6wfszfs6uojt4gjyxjnojc78qujyngrexj834zyvluja",
+    "vol_m5": 14913
    },
    {
     "address": "GNE7e774tkGyxMMzP36ofhNuRrUZ15H4e1LE1xekpump",
     "age_h": 14.4,
-    "buys_m5": 355,
-    "h1": -2.4,
-    "h24": 10222.0,
-    "liq": 227007,
-    "m5": -2.08,
-    "price": 0.005694,
-    "sells_m5": 67,
+    "buys_m5": 391,
+    "h1": -8.48,
+    "h24": 10129.0,
+    "liq": 226246,
+    "m5": 0.29,
+    "price": 0.005643,
+    "sells_m5": 59,
     "symbol": "KIMCHIBULL",
     "url": "https://dexscreener.com/solana/ds6caqybql7gjdatf9cvh189s9ef1mz7dktrsov7rwem",
-    "vol_m5": 13898
-   },
-   {
-    "address": "Hx4cDZzRjfCNeqZCLS8sR4uwPRH5NVVrE4PF9Fugpump",
-    "age_h": 6.6,
-    "buys_m5": 52,
-    "h1": 89.55,
-    "h24": 77.34,
-    "liq": 24298,
-    "m5": 14.88,
-    "price": 7.74e-05,
-    "sells_m5": 61,
-    "symbol": "NOOX",
-    "url": "https://dexscreener.com/solana/6wfszfs6uojt4gjyxjnojc78qujyngrexj834zyvluja",
-    "vol_m5": 12700
-   },
-   {
-    "address": "B28EEeqoZ8NhCtkXLmNkWQp2NUp9mixH54V4etaLpump",
-    "age_h": 3.8,
-    "buys_m5": 164,
-    "h1": 71.7,
-    "h24": 715.0,
-    "liq": 53271,
-    "m5": -3.68,
-    "price": 0.0003671,
-    "sells_m5": 141,
-    "symbol": "TIB",
-    "url": "https://dexscreener.com/solana/8xs4xal95ggvwbtytejcuykuu6jigdfmukfyw8flgnum",
-    "vol_m5": 11550
+    "vol_m5": 14857
    },
    {
     "address": "EhuiZVks9ExNTQUg2ZLeW4SQUMAGiwwhK73rASzBpump",
-    "age_h": 6.8,
-    "buys_m5": 248,
-    "h1": -7.01,
-    "h24": 29086.0,
-    "liq": 371692,
-    "m5": -3.09,
-    "price": 0.01692,
-    "sells_m5": 135,
+    "age_h": 6.9,
+    "buys_m5": 201,
+    "h1": -12.16,
+    "h24": 27065.0,
+    "liq": 358926,
+    "m5": -5.55,
+    "price": 0.01575,
+    "sells_m5": 178,
     "symbol": "OA",
     "url": "https://dexscreener.com/solana/2ouubdtw81shryhw6yyn1zuqzx28exxi8s6f7bxvcbnq",
-    "vol_m5": 9228
+    "vol_m5": 12780
    },
    {
-    "address": "3Xq3nspu91fEzGbzi9kSJ4FYAnBeeiLHPoxQx6cPSQj1",
-    "age_h": 3.3,
-    "buys_m5": 38,
-    "h1": -29.08,
-    "h24": 65.69,
-    "liq": 21828,
-    "m5": -9.44,
-    "price": 7.415e-05,
-    "sells_m5": 12,
-    "symbol": "BLACKTOBER",
-    "url": "https://dexscreener.com/solana/c73m9qwlsay16tkqesejsthbvxwmpbg94ijzrzycxbir",
-    "vol_m5": 3306
+    "address": "B28EEeqoZ8NhCtkXLmNkWQp2NUp9mixH54V4etaLpump",
+    "age_h": 3.9,
+    "buys_m5": 155,
+    "h1": 83.87,
+    "h24": 710.0,
+    "liq": 53051,
+    "m5": -6.71,
+    "price": 0.000365,
+    "sells_m5": 91,
+    "symbol": "TIB",
+    "url": "https://dexscreener.com/solana/8xs4xal95ggvwbtytejcuykuu6jigdfmukfyw8flgnum",
+    "vol_m5": 12263
+   },
+   {
+    "address": "EHPugw1ghE46BeySAa7cHvoZHwYometbp1aK1Q7jpump",
+    "age_h": 44.8,
+    "buys_m5": 352,
+    "h1": -23.1,
+    "h24": -44.81,
+    "liq": 53501,
+    "m5": -11.03,
+    "price": 0.0002958,
+    "sells_m5": 191,
+    "symbol": "MONEYBIZ",
+    "url": "https://dexscreener.com/solana/gs1bqcy4w3scfjmo5ch9c1xggbuqnpvjowy7yc7pjgdl",
+    "vol_m5": 4977
    },
    {
     "address": "5BjfgmtfqvNpAWx1CnZynoWLWNMnrwHLhTFzQ81vkEc8",
-    "age_h": 566.7,
-    "buys_m5": 8,
-    "h1": 28.38,
-    "h24": 81.34,
-    "liq": 31391,
-    "m5": 36.09,
-    "price": 0.0001082,
-    "sells_m5": 7,
+    "age_h": 566.8,
+    "buys_m5": 29,
+    "h1": 22.77,
+    "h24": 71.09,
+    "liq": 30295,
+    "m5": 1.66,
+    "price": 0.000101,
+    "sells_m5": 22,
     "symbol": "ClapCat",
     "url": "https://dexscreener.com/solana/4er3ddypzgrlgwbgfea2mp1xusqpycvmt2zggwy5xaqt",
-    "vol_m5": 3078
+    "vol_m5": 4947
    },
    {
-    "address": "DYR8KqxtvkRHxcoFSMw62335Se3UfuE8GitP2iePpump",
-    "age_h": 9.7,
-    "buys_m5": 27,
-    "h1": 15.48,
-    "h24": 205.0,
-    "liq": 33888,
-    "m5": 7.99,
-    "price": 0.0001345,
-    "sells_m5": 22,
-    "symbol": "SURY",
-    "url": "https://dexscreener.com/solana/bseenmuc2fgldcgkg4b1uvfppccqxtgszjf9ox5vuce1",
-    "vol_m5": 2924
-   },
-   {
-    "address": "EU1MHvQvBoJ7DnLorurze1hwR2JWuyoKyAmkwymwpump",
-    "age_h": 5.0,
-    "buys_m5": 20,
-    "h1": -45.3,
-    "h24": 453.0,
-    "liq": 40910,
-    "m5": 1.0,
-    "price": 0.0002291,
-    "sells_m5": 20,
-    "symbol": "\u30e4\u30ae",
-    "url": "https://dexscreener.com/solana/fq75g9ywek5jhyjvx3vwyxq8axkyjfnxam5dydbfqyyb",
-    "vol_m5": 2168
-   },
-   {
-    "address": "FrtbBAaSZksfh4oV46E7Pvb43QiiUmYLD3dcGS6gpump",
-    "age_h": 2505.3,
-    "buys_m5": 12,
-    "h1": -0.3,
-    "h24": 118.0,
-    "liq": 38036,
-    "m5": 0.03,
-    "price": 0.0001323,
-    "sells_m5": 5,
-    "symbol": "RIBBIT",
-    "url": "https://dexscreener.com/solana/ak9j6xqrsdpxgmqrscv67yrjybbvhjqu6twepikc6n6o",
-    "vol_m5": 1914
+    "address": "3Xq3nspu91fEzGbzi9kSJ4FYAnBeeiLHPoxQx6cPSQj1",
+    "age_h": 3.4,
+    "buys_m5": 31,
+    "h1": -40.33,
+    "h24": 50.04,
+    "liq": 20659,
+    "m5": -5.39,
+    "price": 6.714e-05,
+    "sells_m5": 21,
+    "symbol": "BLACKTOBER",
+    "url": "https://dexscreener.com/solana/c73m9qwlsay16tkqesejsthbvxwmpbg94ijzrzycxbir",
+    "vol_m5": 3621
    },
    {
     "address": "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump",
     "age_h": 1389.4,
-    "buys_m5": 9,
-    "h1": 4.43,
-    "h24": 49.87,
-    "liq": 171699,
-    "m5": -0.03,
-    "price": 0.003299,
-    "sells_m5": 11,
+    "buys_m5": 13,
+    "h1": -0.51,
+    "h24": 49.4,
+    "liq": 169893,
+    "m5": -0.77,
+    "price": 0.003224,
+    "sells_m5": 6,
     "symbol": "GATO",
     "url": "https://dexscreener.com/solana/5e3dxlxgwmtdcoka51wyyakttjfzbwqcoyuhbui5gt2m",
-    "vol_m5": 1701
-   },
-   {
-    "address": "HMYd9tosnUXuNHmq7pXmoePRVBLBBjA3JBfydq6upump",
-    "age_h": 374.4,
-    "buys_m5": 36,
-    "h1": 8.73,
-    "h24": -1.52,
-    "liq": 75707,
-    "m5": -0.51,
-    "price": 0.0005472,
-    "sells_m5": 9,
-    "symbol": "SI276",
-    "url": "https://dexscreener.com/solana/12jc1dzjpzbcdakum4brakh9jcfry2tlg1ffgsl4ftcg",
-    "vol_m5": 1280
+    "vol_m5": 2628
    },
    {
     "address": "8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump",
-    "age_h": 138.2,
-    "buys_m5": 1,
-    "h1": 22.21,
-    "h24": 53.77,
-    "liq": 135480,
-    "m5": 0.56,
-    "price": 0.002375,
-    "sells_m5": 2,
+    "age_h": 138.3,
+    "buys_m5": 7,
+    "h1": 24.11,
+    "h24": 54.83,
+    "liq": 136037,
+    "m5": 0.61,
+    "price": 0.002392,
+    "sells_m5": 4,
     "symbol": "GLITCH",
     "url": "https://dexscreener.com/solana/em6rvzgxhd35pz7cvujctpenv4jaztscavhaxbxcbcg7",
-    "vol_m5": 510
+    "vol_m5": 2423
+   },
+   {
+    "address": "EU1MHvQvBoJ7DnLorurze1hwR2JWuyoKyAmkwymwpump",
+    "age_h": 5.1,
+    "buys_m5": 18,
+    "h1": -28.81,
+    "h24": 492.0,
+    "liq": 42431,
+    "m5": 6.34,
+    "price": 0.0002455,
+    "sells_m5": 24,
+    "symbol": "\u30e4\u30ae",
+    "url": "https://dexscreener.com/solana/fq75g9ywek5jhyjvx3vwyxq8axkyjfnxam5dydbfqyyb",
+    "vol_m5": 2392
+   },
+   {
+    "address": "HMYd9tosnUXuNHmq7pXmoePRVBLBBjA3JBfydq6upump",
+    "age_h": 374.5,
+    "buys_m5": 45,
+    "h1": 10.32,
+    "h24": -0.8,
+    "liq": 75903,
+    "m5": 0.43,
+    "price": 0.0005489,
+    "sells_m5": 13,
+    "symbol": "SI276",
+    "url": "https://dexscreener.com/solana/12jc1dzjpzbcdakum4brakh9jcfry2tlg1ffgsl4ftcg",
+    "vol_m5": 1791
+   },
+   {
+    "address": "FrtbBAaSZksfh4oV46E7Pvb43QiiUmYLD3dcGS6gpump",
+    "age_h": 2505.4,
+    "buys_m5": 11,
+    "h1": 1.77,
+    "h24": 122.0,
+    "liq": 38433,
+    "m5": 1.51,
+    "price": 0.0001348,
+    "sells_m5": 4,
+    "symbol": "RIBBIT",
+    "url": "https://dexscreener.com/solana/ak9j6xqrsdpxgmqrscv67yrjybbvhjqu6twepikc6n6o",
+    "vol_m5": 1569
+   },
+   {
+    "address": "DYR8KqxtvkRHxcoFSMw62335Se3UfuE8GitP2iePpump",
+    "age_h": 9.8,
+    "buys_m5": 6,
+    "h1": 14.33,
+    "h24": 205.0,
+    "liq": 33906,
+    "m5": 0.99,
+    "price": 0.0001346,
+    "sells_m5": 11,
+    "symbol": "SURY",
+    "url": "https://dexscreener.com/solana/bseenmuc2fgldcgkg4b1uvfppccqxtgszjf9ox5vuce1",
+    "vol_m5": 161
    }
   ],
   "started_at": "2026-10-11T18:11:35Z",
-  "ticks": 2905,
-  "watching": 207
+  "ticks": 2906,
+  "watching": 206
  },
- "generated_at": "2026-10-22T09:49:17Z",
+ "generated_at": "2026-10-22T09:54:17Z",
  "stocks": null
 }
