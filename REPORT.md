@@ -4,7 +4,7 @@ _Updated 2026-10-25 17:59 UTC · paper money only._
 
 ## Meme coins (Solana) — live paper trading
 
-Running **14.0 days** · 3,808 market checks · last check 2026-10-25T17:59:15Z · each bot started with $10.00
+Running **14.0 days** · 3,807 market checks · last check 2026-10-25T17:59:38Z · each bot started with $10.00
 
 | Bot | Equity | Return | Trades | Win % | Avg win / loss | Per-trade avg (95% CI) | Profit factor | Max DD | Open |
 |---|---:|---:|---:|---:|---|---|---:|---:|---:|
