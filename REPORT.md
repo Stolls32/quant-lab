@@ -1,10 +1,10 @@
 # Quant Lab report
 
-_Updated 2026-10-28 19:19 UTC · paper money only._
+_Updated 2026-10-28 19:24 UTC · paper money only._
 
 ## Meme coins (Solana) — live paper trading
 
-Running **0.0 days** · 9 market checks · last check 2026-10-28T19:19:23Z · each bot started with $100.00
+Running **0.0 days** · 10 market checks · last check 2026-10-28T19:24:23Z · each bot started with $100.00
 
 > **Season 2.** All bots were reset with fresh paper money; gates and stats count this season only. Earlier seasons:
 > - Season 1: 2026-10-11 to 2026-10-28, $10 per bot; ended with `fresh_launch`, `momentum`, `random_control`, `volume_spike` out of money. Archived in `data/crypto/archive/season-1/`.
@@ -16,7 +16,7 @@ Running **0.0 days** · 9 market checks · last check 2026-10-28T19:19:23Z · ea
 | `random_control` | $100.00 | +0.0% | 0 | – | – | – | – | 0.0% | 0 |
 | `volume_spike` | $100.00 | +0.0% | 0 | – | – | – | – | 0.0% | 0 |
 | `hold_sol` | $99.16 | -0.8% | 0 | – | – | – | – | 0.8% | 1 |
-| `momentum` | $95.90 | -4.1% | 0 | – | – | – | – | 5.4% | 1 |
+| `momentum` | $95.90 | -4.1% | 1 | 0 | 0.0% / -36.6% | -36.6% (– to –) | 0.00 | 5.4% | 0 |
 | `fresh_launch` | $83.54 | -16.5% | 2 | 0 | 0.0% / -52.3% | -52.3% (-69.2 to -35.5) | 0.00 | 19.0% | 2 |
 
 ### Real-money gates (all must be ✅)
@@ -26,7 +26,7 @@ Running **0.0 days** · 9 market checks · last check 2026-10-28T19:19:23Z · ea
 | `claude_analyst` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
 | `dip_reclaim` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
 | `volume_spike` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
-| `momentum` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
+| `momentum` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | collecting data |
 | `fresh_launch` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | collecting data |
 
 _Coin-flip test = permutation test of per-trade returns vs. `random_control` (same tokens, exits and size, random entries). ✅ needs p < 0.010: 0.05 split across the 5 bots being tested, so one lucky bot out of several doesn't count as proof._
@@ -36,6 +36,7 @@ _Coin-flip test = permutation test of per-trade returns vs. `random_control` (sa
 | Bot | take_profit | stop_loss | trailing_stop | time_exit | liquidity_pulled | vanished |
 |---|---:|---:|---:|---:|---:|---:|
 | `fresh_launch` | 0 | 2 | 0 | 0 | 0 | 0 |
+| `momentum` | 0 | 1 | 0 | 0 | 0 | 0 |
 
 </details>
 
