@@ -4,17 +4,20 @@ _Updated 2026-10-28 18:39 UTC · paper money only._
 
 ## Meme coins (Solana) — live paper trading
 
-Running **17.0 days** · 4,613 market checks · last check 2026-10-28T18:38:58Z · each bot started with $10.00
+Running **0.0 days** · 1 market checks · last check 2026-10-28T18:39:23Z · each bot started with $100.00
+
+> **Season 2.** All bots were reset with fresh paper money; gates and stats count this season only. Earlier seasons:
+> - Season 1: 2026-10-11 to 2026-10-28, $10 per bot; ended with `fresh_launch`, `momentum`, `random_control`, `volume_spike` out of money. Archived in `data/crypto/archive/season-1/`.
 
 | Bot | Equity | Return | Trades | Win % | Avg win / loss | Per-trade avg (95% CI) | Profit factor | Max DD | Open |
 |---|---:|---:|---:|---:|---|---|---:|---:|---:|
-| `claude_analyst` _(off: no API key)_ | $10.00 | +0.0% | 0 | – | – | – | – | 0.0% | 0 |
-| `hold_sol` | $8.99 | -10.1% | 0 | – | – | – | – | 12.6% | 1 |
-| `dip_reclaim` | $4.54 | -54.6% | 28 | 29 | 16.5% / -17.5% | -7.8% (-16.0 to -0.3) | 0.38 | 58.1% | 0 |
-| `momentum` | $0.48 | -95.2% | 32 | 28 | 24.4% / -30.3% | -14.9% (-25.4 to -3.6) | 0.31 | 95.6% | 0 |
-| `volume_spike` | $0.39 | -96.1% | 57 | 25 | 34.4% / -23.1% | -9.0% (-16.8 to -0.7) | 0.53 | 96.9% | 0 |
-| `random_control` | $0.19 | -98.1% | 112 | 30 | 26.5% / -16.4% | -3.4% (-8.0 to 1.3) | 0.61 | 98.1% | 0 |
-| `fresh_launch` | $0.12 | -98.8% | 96 | 38 | 65.5% / -52.9% | -8.5% (-21.9 to 5.8) | 0.77 | 99.2% | 0 |
+| `claude_analyst` _(off: no API key)_ | $100.00 | +0.0% | 0 | – | – | – | – | 0.0% | 0 |
+| `dip_reclaim` | $100.00 | +0.0% | 0 | – | – | – | – | 0.0% | 0 |
+| `fresh_launch` | $100.00 | +0.0% | 0 | – | – | – | – | 0.0% | 0 |
+| `random_control` | $100.00 | +0.0% | 0 | – | – | – | – | 0.0% | 0 |
+| `volume_spike` | $100.00 | +0.0% | 0 | – | – | – | – | 0.0% | 0 |
+| `hold_sol` | $99.18 | -0.8% | 0 | – | – | – | – | 0.8% | 1 |
+| `momentum` | $98.74 | -1.3% | 0 | – | – | – | – | 1.3% | 1 |
 
 ### Real-money gates (all must be ✅)
 
@@ -22,23 +25,11 @@ Running **17.0 days** · 4,613 market checks · last check 2026-10-28T18:38:58Z 
 |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|---|
 | `claude_analyst` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
 | `dip_reclaim` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
-| `momentum` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
-| `volume_spike` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
 | `fresh_launch` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
+| `volume_spike` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
+| `momentum` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
 
 _Coin-flip test = permutation test of per-trade returns vs. `random_control` (same tokens, exits and size, random entries). ✅ needs p < 0.010: 0.05 split across the 5 bots being tested, so one lucky bot out of several doesn't count as proof._
-
-<details><summary>How positions closed</summary>
-
-| Bot | take_profit | stop_loss | trailing_stop | time_exit | liquidity_pulled | vanished |
-|---|---:|---:|---:|---:|---:|---:|
-| `dip_reclaim` | 7 | 13 | 7 | 1 | 0 | 0 |
-| `fresh_launch` | 23 | 35 | 15 | 9 | 14 | 0 |
-| `momentum` | 5 | 17 | 9 | 0 | 1 | 0 |
-| `random_control` | 17 | 32 | 16 | 47 | 0 | 0 |
-| `volume_spike` | 11 | 32 | 8 | 6 | 0 | 0 |
-
-</details>
 
 ## Stocks & ETFs — live paper trading (daily)
 
