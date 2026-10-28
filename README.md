@@ -89,6 +89,17 @@ of each strategy class. Add a crypto bot by subclassing `Strategy` in
 `StockStrategy`. If you change costs or rules mid-experiment, write down the date: results
 before and after aren't comparable.
 
+To start over (fresh paper money for every crypto bot), bump `season` in
+`EngineConfig`. The next run archives the old trades and equity to
+`data/crypto/archive/season-N/` and resets every book; REPORT.md lists past seasons.
+
+**Season log**
+- Season 1: 2026-10-11 to 2026-10-28, $10 per bot. Ended with `momentum`, `volume_spike`,
+  `fresh_launch` and `random_control` below the $0.50 minimum trade, so they couldn't
+  trade. Every bot lost to holding SOL (−9%), and the best trader, `dip_reclaim`, was −55%
+  after 28 trades.
+- Season 2: started 2026-10-28, $100 per bot, same rules and costs.
+
 ## The road to real money (not built on purpose)
 - **Stocks:** the same code trades a live Alpaca account by switching keys and
   `ALPACA_BASE_URL`, and refuses unless `LIVE_TRADING_CONFIRM` is set to the exact phrase in

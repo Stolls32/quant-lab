@@ -57,6 +57,7 @@ def crypto_section(d: str) -> list[str]:
     L = ["## Meme coins (Solana) — live paper trading", "",
          f"Running **{days:.1f} days** · {state['ticks']:,} market checks · last check {state.get('last_tick')} · "
          f"each bot started with ${CRYPTO_START(state):.2f}", "",
+         *_seasons_note(state),
          "| Bot | Equity | Return | Trades | Win % | Avg win / loss | Per-trade avg (95% CI) | Profit factor | Max DD | Open |",
          "|---|---:|---:|---:|---:|---|---|---:|---:|---:|"]
     rows = []
@@ -113,6 +114,20 @@ def crypto_section(d: str) -> list[str]:
 
 
 REASONS = ["take_profit", "stop_loss", "trailing_stop", "time_exit", "liquidity_pulled", "vanished"]
+
+
+def _seasons_note(state: dict) -> list[str]:
+    past = state.get("seasons") or []
+    if not past:
+        return []
+    out = [f"> **Season {state.get('season', 1)}.** All bots were reset with fresh paper money; "
+           "gates and stats count this season only. Earlier seasons:"]
+    for p in past:
+        broke = [n for n, c in p["end_cash"].items() if c < 0.5 and n != "hold_sol"]
+        out.append(f"> - Season {p['season']}: {(p['started_at'] or '?')[:10]} to {(p['ended_at'] or '?')[:10]}, "
+                   f"${p['start_cash']:.0f} per bot" + (f"; ended with {', '.join(f'`{b}`' for b in broke)} out of money"
+                   if broke else "") + f". Archived in `{p['archive']}/`.")
+    return out + [""]
 
 
 def CRYPTO_START(state: dict) -> float:

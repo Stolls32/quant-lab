@@ -133,6 +133,23 @@ class TestCryptoEngine(unittest.TestCase):
         lab2 = CryptoLab(self.dir, self.m, CryptoConfig(), strategies=[AlwaysBuy()])
         self.assertIn("TOK", lab2.state["bots"]["always"]["positions"])
 
+    def test_new_season_resets_books_and_archives_once(self):
+        self.step(TOK=dict(price=1.0))
+        self.step(TOK=dict(price=0.5))  # a closed trade in season 1
+        self.lab.save()
+        cfg = CryptoConfig()
+        cfg.engine.season += 1
+        lab2 = CryptoLab(self.dir, self.m, cfg, strategies=[AlwaysBuy()])
+        book = lab2.state["bots"]["always"]
+        self.assertEqual((book["cash"], book["positions"]), (cfg.engine.start_cash_usd, {}))
+        self.assertEqual(lab2.state["ticks"], 0)
+        self.assertFalse(os.path.exists(f"{self.dir}/trades.csv"))
+        old = cfg.engine.season - 1
+        self.assertEqual(len(read_csv(f"{self.dir}/archive/season-{old}/trades.csv")), 1)
+        lab2.save()
+        lab3 = CryptoLab(self.dir, self.m, cfg, strategies=[AlwaysBuy()])  # restart: no second reset
+        self.assertEqual(len(lab3.state["seasons"]), 1)
+
     def test_pair_parsing(self):
         p = {"baseToken": {"address": "X", "symbol": "X"}, "quoteToken": {"address": SOL_MINT},
              "priceUsd": "0.0012", "liquidity": {"usd": 50000}, "pairCreatedAt": 0,

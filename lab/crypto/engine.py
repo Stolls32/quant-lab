@@ -13,6 +13,8 @@ between runs: open positions, price history, cooldowns, the AI budget.
 from __future__ import annotations
 
 import logging
+import os
+import shutil
 import time
 from datetime import datetime, timezone
 
@@ -46,6 +48,10 @@ class CryptoLab:
         self.state = load_json(self.state_path, {})
         self._init_state()
         self.bots = strategies or all_strategies()
+        if not self.state["ticks"]:
+            self.state.setdefault("season", self.cfg.engine.season)  # fresh lab: nothing to archive
+        elif self.state.get("season", 1) < self.cfg.engine.season:
+            self._new_season()
         if not self.state.get("bench_costs_v2"):  # one-time: rebuy the benchmark at fair costs
             self.state["bots"].pop("hold_sol", None)
             self.state["bench_costs_v2"] = True
@@ -68,6 +74,31 @@ class CryptoLab:
         s.setdefault("ai_usage", {})
         s.setdefault("ai_pending", [])
         s.setdefault("last_equity_log", 0)
+
+    def _new_season(self) -> None:
+        """Archive the finished season and hand every bot a fresh book."""
+        st, old = self.state, self.state.get("season", 1)
+        dest = f"{self.dir}/archive/season-{old}"
+        os.makedirs(dest, exist_ok=True)
+        for f in ("trades.csv", "equity.csv", "ai_journal.csv"):
+            if os.path.exists(f"{self.dir}/{f}"):
+                shutil.move(f"{self.dir}/{f}", f"{dest}/{f}")
+        ended = st.get("last_tick")
+        st.setdefault("seasons", []).append({
+            "season": old, "started_at": st.get("started_at"), "ended_at": ended, "ticks": st.get("ticks", 0),
+            "start_cash": next((b["start_cash"] for b in st["bots"].values()), None),
+            "end_cash": {n: round(b["cash"], 4) for n, b in st["bots"].items()},
+            "archive": dest,
+        })
+        save_json_atomic(f"{dest}/state_at_end.json", {k: v for k, v in st.items() if k not in ("hist", "watch", "missing")})
+        st["bots"] = {}
+        st["ai_pending"] = []
+        st["started_at"] = None
+        st["ticks"] = 0
+        st["last_equity_log"] = 0
+        st["season"] = self.cfg.engine.season
+        log.warning("new season %d: archived season %d to %s, every bot reset to $%.2f",
+                    st["season"], old, dest, self.cfg.engine.start_cash_usd)
 
     def _new_book(self) -> dict:
         c = self.cfg.engine.start_cash_usd

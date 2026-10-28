@@ -43,7 +43,12 @@ class SafetyConfig:
 
 @dataclass
 class EngineConfig:
-    start_cash_usd: float = 10.0          # each bot starts with this
+    start_cash_usd: float = 100.0         # each bot starts with this
+    # Bump to start a new "season": every bot (benchmarks included) gets a fresh
+    # book, and the old trades/equity/journal are archived to
+    # data/crypto/archive/season-N/ so gates only count the current season.
+    # Season 1 (2026-10-11 to 2026-10-28) ran on $10 per bot.
+    season: int = 2
     min_trade_usd: float = 0.50
     # Price/liquidity history kept per token (one point per tick).
     history_points: int = 72               # ~6h at 5-minute ticks
