@@ -1,23 +1,23 @@
 # Quant Lab report
 
-_Updated 2026-10-29 10:04 UTC · paper money only._
+_Updated 2026-10-29 10:09 UTC · paper money only._
 
 ## Meme coins (Solana) — live paper trading
 
-Running **0.6 days** · 176 market checks · last check 2026-10-29T10:03:56Z · each bot started with $100.00
+Running **0.6 days** · 177 market checks · last check 2026-10-29T10:08:56Z · each bot started with $100.00
 
 > **Season 2.** All bots were reset with fresh paper money; gates and stats count this season only. Earlier seasons:
 > - Season 1: 2026-10-11 to 2026-10-28, $10 per bot; ended with `fresh_launch`, `momentum`, `random_control`, `volume_spike` out of money. Archived in `data/crypto/archive/season-1/`.
 
 | Bot | Equity | Return | Trades | Win % | Avg win / loss | Per-trade avg (95% CI) | Profit factor | Max DD | Open |
 |---|---:|---:|---:|---:|---|---|---:|---:|---:|
-| `random_control` | $100.49 | +0.5% | 7 | 57 | 29.4% / -35.3% | 1.6% (-28.3 to 28.4) | 1.11 | 20.0% | 3 |
 | `claude_analyst` _(off: no API key)_ | $100.00 | +0.0% | 0 | – | – | – | – | 0.0% | 0 |
-| `hold_sol` | $97.44 | -2.6% | 0 | – | – | – | – | 3.6% | 1 |
-| `dip_reclaim` | $96.79 | -3.2% | 1 | 0 | 0.0% / -0.6% | -0.6% (– to –) | 0.00 | 4.1% | 1 |
+| `random_control` | $98.75 | -1.3% | 7 | 57 | 29.4% / -35.3% | 1.6% (-28.3 to 28.4) | 1.11 | 20.0% | 3 |
+| `hold_sol` | $97.47 | -2.5% | 0 | – | – | – | – | 3.6% | 1 |
+| `dip_reclaim` | $96.47 | -3.5% | 1 | 0 | 0.0% / -0.6% | -0.6% (– to –) | 0.00 | 4.1% | 1 |
 | `volume_spike` | $77.71 | -22.3% | 4 | 0 | 0.0% / -22.3% | -22.3% (-29.6 to -12.7) | 0.00 | 22.7% | 0 |
-| `momentum` | $50.54 | -49.5% | 9 | 11 | 71.6% / -31.8% | -20.3% (-36.0 to 4.3) | 0.28 | 49.5% | 1 |
-| `fresh_launch` | $19.51 | -80.5% | 25 | 32 | 54.6% / -57.1% | -21.4% (-44.7 to 3.0) | 0.40 | 90.2% | 1 |
+| `momentum` | $46.41 | -53.6% | 10 | 10 | 71.6% / -31.8% | -21.4% (-35.5 to 1.2) | 0.25 | 53.6% | 0 |
+| `fresh_launch` | $19.22 | -80.8% | 25 | 32 | 54.6% / -57.1% | -21.4% (-44.7 to 3.0) | 0.40 | 90.2% | 1 |
 
 ### Real-money gates (all must be ✅)
 
@@ -37,7 +37,7 @@ _Coin-flip test = permutation test of per-trade returns vs. `random_control` (sa
 |---|---:|---:|---:|---:|---:|---:|
 | `dip_reclaim` | 0 | 0 | 1 | 0 | 0 | 0 |
 | `fresh_launch` | 5 | 12 | 4 | 1 | 3 | 0 |
-| `momentum` | 1 | 8 | 0 | 0 | 0 | 0 |
+| `momentum` | 1 | 9 | 0 | 0 | 0 | 0 |
 | `random_control` | 3 | 2 | 1 | 1 | 0 | 0 |
 | `volume_spike` | 0 | 3 | 0 | 1 | 0 | 0 |
 
