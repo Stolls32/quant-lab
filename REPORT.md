@@ -1,10 +1,10 @@
 # Quant Lab report
 
-_Updated 2026-10-29 03:09 UTC · paper money only._
+_Updated 2026-10-29 03:14 UTC · paper money only._
 
 ## Meme coins (Solana) — live paper trading
 
-Running **0.4 days** · 102 market checks · last check 2026-10-29T03:09:40Z · each bot started with $100.00
+Running **0.4 days** · 103 market checks · last check 2026-10-29T03:14:40Z · each bot started with $100.00
 
 > **Season 2.** All bots were reset with fresh paper money; gates and stats count this season only. Earlier seasons:
 > - Season 1: 2026-10-11 to 2026-10-28, $10 per bot; ended with `fresh_launch`, `momentum`, `random_control`, `volume_spike` out of money. Archived in `data/crypto/archive/season-1/`.
@@ -12,12 +12,12 @@ Running **0.4 days** · 102 market checks · last check 2026-10-29T03:09:40Z · 
 | Bot | Equity | Return | Trades | Win % | Avg win / loss | Per-trade avg (95% CI) | Profit factor | Max DD | Open |
 |---|---:|---:|---:|---:|---|---|---:|---:|---:|
 | `claude_analyst` _(off: no API key)_ | $100.00 | +0.0% | 0 | – | – | – | – | 0.0% | 0 |
-| `dip_reclaim` | $99.49 | -0.5% | 0 | – | – | – | – | 3.7% | 2 |
-| `hold_sol` | $97.32 | -2.7% | 0 | – | – | – | – | 3.6% | 1 |
-| `random_control` | $95.54 | -4.5% | 3 | 67 | 25.3% / -71.3% | -6.9% (-71.3 to 45.3) | 0.71 | 20.0% | 2 |
-| `volume_spike` | $85.67 | -14.3% | 2 | 0 | 0.0% / -25.5% | -25.5% (-28.5 to -22.5) | 0.00 | 16.4% | 1 |
-| `momentum` | $79.58 | -20.4% | 5 | 20 | 71.6% / -36.9% | -15.2% (-42.3 to 29.4) | 0.49 | 25.5% | 2 |
-| `fresh_launch` | $55.70 | -44.3% | 18 | 39 | 49.3% / -58.2% | -16.4% (-42.1 to 11.5) | 0.54 | 47.6% | 0 |
+| `dip_reclaim` | $99.35 | -0.6% | 0 | – | – | – | – | 3.7% | 2 |
+| `hold_sol` | $96.96 | -3.0% | 0 | – | – | – | – | 3.6% | 1 |
+| `random_control` | $93.81 | -6.2% | 3 | 67 | 25.3% / -71.3% | -6.9% (-71.3 to 45.3) | 0.71 | 20.0% | 2 |
+| `volume_spike` | $85.94 | -14.1% | 2 | 0 | 0.0% / -25.5% | -25.5% (-28.5 to -22.5) | 0.00 | 16.4% | 1 |
+| `momentum` | $82.38 | -17.6% | 5 | 20 | 71.6% / -36.9% | -15.2% (-42.3 to 29.4) | 0.49 | 25.5% | 2 |
+| `fresh_launch` | $54.91 | -45.1% | 18 | 39 | 49.3% / -58.2% | -16.4% (-42.1 to 11.5) | 0.54 | 47.6% | 1 |
 
 ### Real-money gates (all must be ✅)
 
