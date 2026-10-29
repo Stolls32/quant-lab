@@ -1,23 +1,23 @@
 # Quant Lab report
 
-_Updated 2026-10-29 03:39 UTC · paper money only._
+_Updated 2026-10-29 03:44 UTC · paper money only._
 
 ## Meme coins (Solana) — live paper trading
 
-Running **0.4 days** · 108 market checks · last check 2026-10-29T03:39:40Z · each bot started with $100.00
+Running **0.4 days** · 109 market checks · last check 2026-10-29T03:44:40Z · each bot started with $100.00
 
 > **Season 2.** All bots were reset with fresh paper money; gates and stats count this season only. Earlier seasons:
 > - Season 1: 2026-10-11 to 2026-10-28, $10 per bot; ended with `fresh_launch`, `momentum`, `random_control`, `volume_spike` out of money. Archived in `data/crypto/archive/season-1/`.
 
 | Bot | Equity | Return | Trades | Win % | Avg win / loss | Per-trade avg (95% CI) | Profit factor | Max DD | Open |
 |---|---:|---:|---:|---:|---|---|---:|---:|---:|
-| `random_control` | $100.21 | +0.2% | 4 | 75 | 28.0% / -71.3% | 3.2% (-45.1 to 39.4) | 1.18 | 20.0% | 1 |
+| `random_control` | $100.46 | +0.5% | 4 | 75 | 28.0% / -71.3% | 3.2% (-45.1 to 39.4) | 1.18 | 20.0% | 1 |
 | `claude_analyst` _(off: no API key)_ | $100.00 | +0.0% | 0 | – | – | – | – | 0.0% | 0 |
-| `dip_reclaim` | $99.28 | -0.7% | 0 | – | – | – | – | 3.7% | 2 |
-| `hold_sol` | $96.88 | -3.1% | 0 | – | – | – | – | 3.6% | 1 |
-| `volume_spike` | $86.17 | -13.8% | 2 | 0 | 0.0% / -25.5% | -25.5% (-28.5 to -22.5) | 0.00 | 16.4% | 1 |
-| `momentum` | $80.95 | -19.1% | 5 | 20 | 71.6% / -36.9% | -15.2% (-42.3 to 29.4) | 0.49 | 25.5% | 2 |
-| `fresh_launch` | $38.31 | -61.7% | 19 | 37 | 49.3% / -60.6% | -20.1% (-46.2 to 8.9) | 0.47 | 61.7% | 1 |
+| `dip_reclaim` | $99.55 | -0.4% | 0 | – | – | – | – | 3.7% | 2 |
+| `hold_sol` | $96.92 | -3.1% | 0 | – | – | – | – | 3.6% | 1 |
+| `volume_spike` | $86.22 | -13.8% | 2 | 0 | 0.0% / -25.5% | -25.5% (-28.5 to -22.5) | 0.00 | 16.4% | 1 |
+| `momentum` | $77.58 | -22.4% | 5 | 20 | 71.6% / -36.9% | -15.2% (-42.3 to 29.4) | 0.49 | 25.5% | 2 |
+| `fresh_launch` | $43.94 | -56.1% | 19 | 37 | 49.3% / -60.6% | -20.1% (-46.2 to 8.9) | 0.47 | 61.7% | 1 |
 
 ### Real-money gates (all must be ✅)
 
