@@ -1,23 +1,23 @@
 # Quant Lab report
 
-_Updated 2026-10-29 06:54 UTC · paper money only._
+_Updated 2026-10-29 06:59 UTC · paper money only._
 
 ## Meme coins (Solana) — live paper trading
 
-Running **0.5 days** · 138 market checks · last check 2026-10-29T06:53:56Z · each bot started with $100.00
+Running **0.5 days** · 139 market checks · last check 2026-10-29T06:58:56Z · each bot started with $100.00
 
 > **Season 2.** All bots were reset with fresh paper money; gates and stats count this season only. Earlier seasons:
 > - Season 1: 2026-10-11 to 2026-10-28, $10 per bot; ended with `fresh_launch`, `momentum`, `random_control`, `volume_spike` out of money. Archived in `data/crypto/archive/season-1/`.
 
 | Bot | Equity | Return | Trades | Win % | Avg win / loss | Per-trade avg (95% CI) | Profit factor | Max DD | Open |
 |---|---:|---:|---:|---:|---|---|---:|---:|---:|
-| `random_control` | $105.58 | +5.6% | 6 | 67 | 29.4% / -40.4% | 6.1% (-28.8 to 32.7) | 1.45 | 20.0% | 3 |
+| `random_control` | $106.10 | +6.1% | 6 | 67 | 29.4% / -40.4% | 6.1% (-28.8 to 32.7) | 1.45 | 20.0% | 3 |
 | `claude_analyst` _(off: no API key)_ | $100.00 | +0.0% | 0 | – | – | – | – | 0.0% | 0 |
-| `hold_sol` | $97.15 | -2.9% | 0 | – | – | – | – | 3.6% | 1 |
-| `dip_reclaim` | $96.71 | -3.3% | 1 | 0 | 0.0% / -0.6% | -0.6% (– to –) | 0.00 | 3.8% | 1 |
+| `hold_sol` | $97.34 | -2.7% | 0 | – | – | – | – | 3.6% | 1 |
+| `dip_reclaim` | $96.86 | -3.1% | 1 | 0 | 0.0% / -0.6% | -0.6% (– to –) | 0.00 | 3.8% | 1 |
 | `volume_spike` | $77.71 | -22.3% | 4 | 0 | 0.0% / -22.3% | -22.3% (-29.6 to -12.7) | 0.00 | 22.7% | 0 |
 | `momentum` | $60.55 | -39.5% | 8 | 12 | 71.6% / -32.8% | -19.7% (-37.3 to 8.0) | 0.31 | 39.5% | 0 |
-| `fresh_launch` | $20.82 | -79.2% | 23 | 30 | 49.3% / -60.4% | -27.0% (-50.5 to -2.6) | 0.36 | 79.2% | 1 |
+| `fresh_launch` | $12.99 | -87.0% | 24 | 33 | 54.6% / -60.4% | -22.1% (-46.3 to 4.0) | 0.40 | 87.0% | 0 |
 
 ### Real-money gates (all must be ✅)
 
@@ -36,7 +36,7 @@ _Coin-flip test = permutation test of per-trade returns vs. `random_control` (sa
 | Bot | take_profit | stop_loss | trailing_stop | time_exit | liquidity_pulled | vanished |
 |---|---:|---:|---:|---:|---:|---:|
 | `dip_reclaim` | 0 | 0 | 1 | 0 | 0 | 0 |
-| `fresh_launch` | 4 | 12 | 3 | 1 | 3 | 0 |
+| `fresh_launch` | 5 | 12 | 3 | 1 | 3 | 0 |
 | `momentum` | 1 | 7 | 0 | 0 | 0 | 0 |
 | `random_control` | 3 | 1 | 1 | 1 | 0 | 0 |
 | `volume_spike` | 0 | 3 | 0 | 1 | 0 | 0 |
