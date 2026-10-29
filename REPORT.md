@@ -1,23 +1,23 @@
 # Quant Lab report
 
-_Updated 2026-10-29 09:54 UTC · paper money only._
+_Updated 2026-10-29 09:59 UTC · paper money only._
 
 ## Meme coins (Solana) — live paper trading
 
-Running **0.6 days** · 174 market checks · last check 2026-10-29T09:53:56Z · each bot started with $100.00
+Running **0.6 days** · 175 market checks · last check 2026-10-29T09:58:56Z · each bot started with $100.00
 
 > **Season 2.** All bots were reset with fresh paper money; gates and stats count this season only. Earlier seasons:
 > - Season 1: 2026-10-11 to 2026-10-28, $10 per bot; ended with `fresh_launch`, `momentum`, `random_control`, `volume_spike` out of money. Archived in `data/crypto/archive/season-1/`.
 
 | Bot | Equity | Return | Trades | Win % | Avg win / loss | Per-trade avg (95% CI) | Profit factor | Max DD | Open |
 |---|---:|---:|---:|---:|---|---|---:|---:|---:|
+| `random_control` | $100.49 | +0.5% | 7 | 57 | 29.4% / -35.3% | 1.6% (-28.3 to 28.4) | 1.11 | 20.0% | 3 |
 | `claude_analyst` _(off: no API key)_ | $100.00 | +0.0% | 0 | – | – | – | – | 0.0% | 0 |
-| `random_control` | $99.97 | -0.0% | 7 | 57 | 29.4% / -35.3% | 1.6% (-28.3 to 28.4) | 1.11 | 20.0% | 3 |
-| `hold_sol` | $97.39 | -2.6% | 0 | – | – | – | – | 3.6% | 1 |
-| `dip_reclaim` | $96.70 | -3.3% | 1 | 0 | 0.0% / -0.6% | -0.6% (– to –) | 0.00 | 4.1% | 1 |
+| `hold_sol` | $97.44 | -2.6% | 0 | – | – | – | – | 3.6% | 1 |
+| `dip_reclaim` | $96.79 | -3.2% | 1 | 0 | 0.0% / -0.6% | -0.6% (– to –) | 0.00 | 4.1% | 1 |
 | `volume_spike` | $77.71 | -22.3% | 4 | 0 | 0.0% / -22.3% | -22.3% (-29.6 to -12.7) | 0.00 | 22.7% | 0 |
-| `momentum` | $54.24 | -45.8% | 9 | 11 | 71.6% / -31.8% | -20.3% (-36.0 to 4.3) | 0.28 | 45.8% | 1 |
-| `fresh_launch` | $17.82 | -82.2% | 25 | 32 | 54.6% / -57.1% | -21.4% (-44.7 to 3.0) | 0.40 | 90.2% | 1 |
+| `momentum` | $50.54 | -49.5% | 9 | 11 | 71.6% / -31.8% | -20.3% (-36.0 to 4.3) | 0.28 | 49.5% | 1 |
+| `fresh_launch` | $19.51 | -80.5% | 25 | 32 | 54.6% / -57.1% | -21.4% (-44.7 to 3.0) | 0.40 | 90.2% | 1 |
 
 ### Real-money gates (all must be ✅)
 
