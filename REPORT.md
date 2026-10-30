@@ -1,10 +1,10 @@
 # Quant Lab report
 
-_Updated 2026-10-30 16:45 UTC · paper money only._
+_Updated 2026-10-30 16:50 UTC · paper money only._
 
 ## Meme coins (Solana) — live paper trading
 
-Running **1.9 days** · 511 market checks · last check 2026-10-30T16:45:43Z · each bot started with $100.00
+Running **1.9 days** · 512 market checks · last check 2026-10-30T16:50:43Z · each bot started with $100.00
 
 > **Season 2.** All bots were reset with fresh paper money; gates and stats count this season only. Earlier seasons:
 > - Season 1: 2026-10-11 to 2026-10-28, $10 per bot; ended with `fresh_launch`, `momentum`, `random_control`, `volume_spike` out of money. Archived in `data/crypto/archive/season-1/`.
@@ -13,9 +13,9 @@ Running **1.9 days** · 511 market checks · last check 2026-10-30T16:45:43Z · 
 |---|---:|---:|---:|---:|---|---|---:|---:|---:|
 | `dip_reclaim` | $105.06 | +5.1% | 4 | 50 | 14.8% / -4.7% | 5.1% (-4.7 to 14.8) | 3.17 | 4.8% | 0 |
 | `claude_analyst` _(off: no API key)_ | $100.00 | +0.0% | 0 | – | – | – | – | 0.0% | 0 |
-| `random_control` | $98.10 | -1.9% | 26 | 42 | 26.9% / -18.3% | 0.8% (-9.8 to 11.7) | 1.08 | 34.9% | 3 |
-| `hold_sol` | $92.64 | -7.4% | 0 | – | – | – | – | 9.9% | 1 |
-| `volume_spike` | $64.27 | -35.7% | 10 | 10 | 23.6% / -17.9% | -13.8% (-22.2 to -3.3) | 0.15 | 35.7% | 1 |
+| `random_control` | $97.82 | -2.2% | 26 | 42 | 26.9% / -18.3% | 0.8% (-9.8 to 11.7) | 1.08 | 34.9% | 3 |
+| `hold_sol` | $92.08 | -7.9% | 0 | – | – | – | – | 9.9% | 1 |
+| `volume_spike` | $60.44 | -39.6% | 11 | 9 | 23.6% / -18.2% | -14.4% (-22.1 to -4.7) | 0.13 | 39.6% | 0 |
 | `momentum` | $16.78 | -83.2% | 22 | 18 | 43.9% / -30.3% | -16.8% (-28.6 to -2.3) | 0.35 | 83.2% | 0 |
 | `fresh_launch` | $0.01 | -100.0% | 33 | 33 | 53.3% / -61.1% | -23.0% (-44.1 to -0.8) | 0.44 | 100.0% | 0 |
 
@@ -39,7 +39,7 @@ _Coin-flip test = permutation test of per-trade returns vs. `random_control` (sa
 | `fresh_launch` | 6 | 14 | 6 | 1 | 6 | 0 |
 | `momentum` | 3 | 18 | 1 | 0 | 0 | 0 |
 | `random_control` | 7 | 6 | 4 | 9 | 0 | 0 |
-| `volume_spike` | 1 | 6 | 1 | 2 | 0 | 0 |
+| `volume_spike` | 1 | 7 | 1 | 2 | 0 | 0 |
 
 </details>
 
