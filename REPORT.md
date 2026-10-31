@@ -1,30 +1,30 @@
 # Quant Lab report
 
-_Updated 2026-10-31 04:26 UTC · paper money only._
+_Updated 2026-10-31 04:31 UTC · paper money only._
 
 ## Meme coins (Solana) — live paper trading
 
-Running **2.4 days** · 635 market checks · last check 2026-10-31T04:26:18Z · each bot started with $100.00
+Running **2.4 days** · 636 market checks · last check 2026-10-31T04:31:18Z · each bot started with $100.00
 
 > **Season 2.** All bots were reset with fresh paper money; gates and stats count this season only. Earlier seasons:
 > - Season 1: 2026-10-11 to 2026-10-28, $10 per bot; ended with `fresh_launch`, `momentum`, `random_control`, `volume_spike` out of money. Archived in `data/crypto/archive/season-1/`.
 
 | Bot | Equity | Return | Trades | Win % | Avg win / loss | Per-trade avg (95% CI) | Profit factor | Max DD | Open |
 |---|---:|---:|---:|---:|---|---|---:|---:|---:|
+| `dip_reclaim` | $101.01 | +1.0% | 4 | 50 | 14.8% / -4.7% | 5.1% (-4.7 to 14.8) | 3.17 | 5.4% | 2 |
 | `claude_analyst` _(off: no API key)_ | $100.00 | +0.0% | 0 | – | – | – | – | 0.0% | 0 |
-| `dip_reclaim` | $99.39 | -0.6% | 4 | 50 | 14.8% / -4.7% | 5.1% (-4.7 to 14.8) | 3.17 | 5.4% | 2 |
-| `hold_sol` | $93.35 | -6.6% | 0 | – | – | – | – | 9.9% | 1 |
-| `random_control` | $90.15 | -9.9% | 32 | 38 | 24.8% / -15.7% | -0.5% (-9.4 to 8.2) | 0.95 | 34.9% | 3 |
+| `hold_sol` | $93.50 | -6.5% | 0 | – | – | – | – | 9.9% | 1 |
+| `random_control` | $88.20 | -11.8% | 32 | 38 | 24.8% / -15.7% | -0.5% (-9.4 to 8.2) | 0.95 | 34.9% | 3 |
 | `volume_spike` | $54.29 | -45.7% | 13 | 8 | 23.6% / -17.2% | -14.1% (-21.2 to -5.4) | 0.11 | 45.7% | 0 |
-| `momentum` | $2.01 | -98.0% | 28 | 21 | 41.6% / -32.2% | -16.3% (-28.4 to -3.3) | 0.32 | 98.2% | 1 |
+| `momentum` | $2.16 | -97.8% | 28 | 21 | 41.6% / -32.2% | -16.3% (-28.4 to -3.3) | 0.32 | 98.2% | 1 |
 | `fresh_launch` | $0.01 | -100.0% | 33 | 33 | 53.3% / -61.1% | -23.0% (-44.1 to -0.8) | 0.44 | 100.0% | 0 |
 
 ### Real-money gates (all must be ✅)
 
 | Bot | 100+ trades | 30+ days | Profitable | Profitable at 2x costs | Edge CI above 0 | Beats coin flip | Beats holding SOL | Drawdown < 40% | Verdict |
 |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|---|
-| `claude_analyst` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
 | `dip_reclaim` | ❌ | ❌ | ✅ | ❌ | ❌ | ❌ | ✅ | ✅ | collecting data |
+| `claude_analyst` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
 | `volume_spike` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
 | `momentum` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
 | `fresh_launch` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
