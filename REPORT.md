@@ -1,22 +1,22 @@
 # Quant Lab report
 
-_Updated 2026-10-31 17:17 UTC · paper money only._
+_Updated 2026-10-31 17:22 UTC · paper money only._
 
 ## Meme coins (Solana) — live paper trading
 
-Running **2.9 days** · 775 market checks · last check 2026-10-31T17:16:55Z · each bot started with $100.00
+Running **2.9 days** · 776 market checks · last check 2026-10-31T17:21:55Z · each bot started with $100.00
 
 > **Season 2.** All bots were reset with fresh paper money; gates and stats count this season only. Earlier seasons:
 > - Season 1: 2026-10-11 to 2026-10-28, $10 per bot; ended with `fresh_launch`, `momentum`, `random_control`, `volume_spike` out of money. Archived in `data/crypto/archive/season-1/`.
 
 | Bot | Equity | Return | Trades | Win % | Avg win / loss | Per-trade avg (95% CI) | Profit factor | Max DD | Open |
 |---|---:|---:|---:|---:|---|---|---:|---:|---:|
-| `dip_reclaim` | $103.26 | +3.3% | 6 | 67 | 11.6% / -4.7% | 6.2% (-1.4 to 12.8) | 4.97 | 5.4% | 2 |
+| `dip_reclaim` | $103.45 | +3.5% | 6 | 67 | 11.6% / -4.7% | 6.2% (-1.4 to 12.8) | 4.97 | 5.4% | 2 |
 | `claude_analyst` _(off: no API key)_ | $100.00 | +0.0% | 0 | – | – | – | – | 0.0% | 0 |
-| `hold_sol` | $93.21 | -6.8% | 0 | – | – | – | – | 9.9% | 1 |
-| `random_control` | $64.53 | -35.5% | 41 | 34 | 21.6% / -16.6% | -3.6% (-10.9 to 4.1) | 0.68 | 45.1% | 2 |
-| `volume_spike` | $49.75 | -50.3% | 13 | 8 | 23.6% / -17.2% | -14.1% (-21.2 to -5.4) | 0.11 | 50.3% | 2 |
-| `momentum` | $0.55 | -99.4% | 34 | 21 | 36.7% / -30.6% | -16.8% (-26.7 to -5.6) | 0.31 | 99.5% | 1 |
+| `hold_sol` | $93.31 | -6.7% | 0 | – | – | – | – | 9.9% | 1 |
+| `random_control` | $65.72 | -34.3% | 41 | 34 | 21.6% / -16.6% | -3.6% (-10.9 to 4.1) | 0.68 | 45.1% | 2 |
+| `volume_spike` | $50.98 | -49.0% | 13 | 8 | 23.6% / -17.2% | -14.1% (-21.2 to -5.4) | 0.11 | 50.3% | 2 |
+| `momentum` | $0.56 | -99.4% | 34 | 21 | 36.7% / -30.6% | -16.8% (-26.7 to -5.6) | 0.31 | 99.5% | 1 |
 | `fresh_launch` | $0.01 | -100.0% | 33 | 33 | 53.3% / -61.1% | -23.0% (-44.1 to -0.8) | 0.44 | 100.0% | 0 |
 
 ### Real-money gates (all must be ✅)
