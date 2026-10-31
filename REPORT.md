@@ -1,10 +1,10 @@
 # Quant Lab report
 
-_Updated 2026-10-31 04:16 UTC · paper money only._
+_Updated 2026-10-31 04:21 UTC · paper money only._
 
 ## Meme coins (Solana) — live paper trading
 
-Running **2.4 days** · 633 market checks · last check 2026-10-31T04:16:18Z · each bot started with $100.00
+Running **2.4 days** · 634 market checks · last check 2026-10-31T04:21:18Z · each bot started with $100.00
 
 > **Season 2.** All bots were reset with fresh paper money; gates and stats count this season only. Earlier seasons:
 > - Season 1: 2026-10-11 to 2026-10-28, $10 per bot; ended with `fresh_launch`, `momentum`, `random_control`, `volume_spike` out of money. Archived in `data/crypto/archive/season-1/`.
@@ -12,11 +12,11 @@ Running **2.4 days** · 633 market checks · last check 2026-10-31T04:16:18Z · 
 | Bot | Equity | Return | Trades | Win % | Avg win / loss | Per-trade avg (95% CI) | Profit factor | Max DD | Open |
 |---|---:|---:|---:|---:|---|---|---:|---:|---:|
 | `claude_analyst` _(off: no API key)_ | $100.00 | +0.0% | 0 | – | – | – | – | 0.0% | 0 |
-| `dip_reclaim` | $99.80 | -0.2% | 4 | 50 | 14.8% / -4.7% | 5.1% (-4.7 to 14.8) | 3.17 | 5.0% | 2 |
-| `hold_sol` | $93.53 | -6.5% | 0 | – | – | – | – | 9.9% | 1 |
-| `random_control` | $91.73 | -8.3% | 32 | 38 | 24.8% / -15.7% | -0.5% (-9.4 to 8.2) | 0.95 | 34.9% | 3 |
+| `dip_reclaim` | $99.39 | -0.6% | 4 | 50 | 14.8% / -4.7% | 5.1% (-4.7 to 14.8) | 3.17 | 5.4% | 2 |
+| `hold_sol` | $93.35 | -6.6% | 0 | – | – | – | – | 9.9% | 1 |
+| `random_control` | $90.15 | -9.9% | 32 | 38 | 24.8% / -15.7% | -0.5% (-9.4 to 8.2) | 0.95 | 34.9% | 3 |
 | `volume_spike` | $54.29 | -45.7% | 13 | 8 | 23.6% / -17.2% | -14.1% (-21.2 to -5.4) | 0.11 | 45.7% | 0 |
-| `momentum` | $2.04 | -98.0% | 28 | 21 | 41.6% / -32.2% | -16.3% (-28.4 to -3.3) | 0.32 | 98.2% | 1 |
+| `momentum` | $2.01 | -98.0% | 28 | 21 | 41.6% / -32.2% | -16.3% (-28.4 to -3.3) | 0.32 | 98.2% | 1 |
 | `fresh_launch` | $0.01 | -100.0% | 33 | 33 | 53.3% / -61.1% | -23.0% (-44.1 to -0.8) | 0.44 | 100.0% | 0 |
 
 ### Real-money gates (all must be ✅)
