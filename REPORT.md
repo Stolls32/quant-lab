@@ -1,10 +1,10 @@
 # Quant Lab report
 
-_Updated 2026-11-01 12:58 UTC · paper money only._
+_Updated 2026-11-01 13:03 UTC · paper money only._
 
 ## Meme coins (Solana) — live paper trading
 
-Running **3.8 days** · 999 market checks · last check 2026-11-01T12:58:11Z · each bot started with $100.00
+Running **3.8 days** · 1,000 market checks · last check 2026-11-01T13:03:11Z · each bot started with $100.00
 
 > **Season 2.** All bots were reset with fresh paper money; gates and stats count this season only. Earlier seasons:
 > - Season 1: 2026-10-11 to 2026-10-28, $10 per bot; ended with `fresh_launch`, `momentum`, `random_control`, `volume_spike` out of money. Archived in `data/crypto/archive/season-1/`.
@@ -12,10 +12,10 @@ Running **3.8 days** · 999 market checks · last check 2026-11-01T12:58:11Z · 
 | Bot | Equity | Return | Trades | Win % | Avg win / loss | Per-trade avg (95% CI) | Profit factor | Max DD | Open |
 |---|---:|---:|---:|---:|---|---|---:|---:|---:|
 | `claude_analyst` _(off: no API key)_ | $100.00 | +0.0% | 0 | – | – | – | – | 0.0% | 0 |
-| `dip_reclaim` | $97.38 | -2.6% | 8 | 50 | 11.6% / -11.3% | 0.1% (-8.8 to 8.8) | 1.02 | 9.7% | 1 |
-| `hold_sol` | $92.20 | -7.8% | 0 | – | – | – | – | 9.9% | 1 |
-| `random_control` | $79.88 | -20.1% | 53 | 34 | 23.7% / -14.6% | -1.6% (-8.0 to 4.6) | 0.85 | 46.8% | 2 |
-| `volume_spike` | $22.84 | -77.2% | 22 | 14 | 8.3% / -17.2% | -13.8% (-18.7 to -8.2) | 0.08 | 77.6% | 1 |
+| `dip_reclaim` | $97.22 | -2.8% | 8 | 50 | 11.6% / -11.3% | 0.1% (-8.8 to 8.8) | 1.02 | 9.7% | 1 |
+| `hold_sol` | $92.17 | -7.8% | 0 | – | – | – | – | 9.9% | 1 |
+| `random_control` | $77.59 | -22.4% | 53 | 34 | 23.7% / -14.6% | -1.6% (-8.0 to 4.6) | 0.85 | 46.8% | 3 |
+| `volume_spike` | $23.16 | -76.8% | 22 | 14 | 8.3% / -17.2% | -13.8% (-18.7 to -8.2) | 0.08 | 77.6% | 1 |
 | `momentum` | $0.46 | -99.5% | 35 | 20 | 36.7% / -30.6% | -17.2% (-26.8 to -6.6) | 0.31 | 99.5% | 0 |
 | `fresh_launch` | $0.01 | -100.0% | 33 | 33 | 53.3% / -61.1% | -23.0% (-44.1 to -0.8) | 0.44 | 100.0% | 0 |
 
