@@ -1,17 +1,17 @@
 # Quant Lab report
 
-_Updated 2026-11-03 01:45 UTC · paper money only._
+_Updated 2026-11-03 01:50 UTC · paper money only._
 
 ## Meme coins (Solana) — live paper trading
 
-Running **5.3 days** · 1,408 market checks · last check 2026-11-03T01:45:21Z · each bot started with $100.00
+Running **5.3 days** · 1,409 market checks · last check 2026-11-03T01:50:21Z · each bot started with $100.00
 
 > **Season 2.** All bots were reset with fresh paper money; gates and stats count this season only. Earlier seasons:
 > - Season 1: 2026-10-11 to 2026-10-28, $10 per bot; ended with `fresh_launch`, `momentum`, `random_control`, `volume_spike` out of money. Archived in `data/crypto/archive/season-1/`.
 
 | Bot | Equity | Return | Trades | Win % | Avg win / loss | Per-trade avg (95% CI) | Profit factor | Max DD | Open |
 |---|---:|---:|---:|---:|---|---|---:|---:|---:|
-| `dip_reclaim` | $101.24 | +1.2% | 10 | 50 | 11.9% / -12.5% | -0.3% (-8.8 to 8.1) | 0.95 | 11.7% | 1 |
+| `dip_reclaim` | $101.24 | +1.2% | 11 | 55 | 12.2% / -12.5% | 1.0% (-6.9 to 8.6) | 1.17 | 11.7% | 0 |
 | `claude_analyst` _(off: no API key)_ | $100.00 | +0.0% | 0 | – | – | – | – | 0.0% | 0 |
 | `hold_sol` | $89.62 | -10.4% | 0 | – | – | – | – | 11.8% | 1 |
 | `random_control` | $13.75 | -86.3% | 78 | 31 | 22.6% / -18.1% | -5.6% (-11.5 to 0.1) | 0.60 | 87.7% | 1 |
@@ -23,7 +23,7 @@ Running **5.3 days** · 1,408 market checks · last check 2026-11-03T01:45:21Z �
 
 | Bot | 100+ trades | 30+ days | Profitable | Profitable at 2x costs | Edge CI above 0 | Beats coin flip | Beats holding SOL | Drawdown < 40% | Verdict |
 |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|---|
-| `dip_reclaim` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ | collecting data |
+| `dip_reclaim` | ❌ | ❌ | ✅ | ❌ | ❌ | ❌ | ✅ | ✅ | collecting data |
 | `claude_analyst` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
 | `volume_spike` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
 | `momentum` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
@@ -35,7 +35,7 @@ _Coin-flip test = permutation test of per-trade returns vs. `random_control` (sa
 
 | Bot | take_profit | stop_loss | trailing_stop | time_exit | liquidity_pulled | vanished |
 |---|---:|---:|---:|---:|---:|---:|
-| `dip_reclaim` | 4 | 3 | 2 | 1 | 0 | 0 |
+| `dip_reclaim` | 5 | 3 | 2 | 1 | 0 | 0 |
 | `fresh_launch` | 6 | 14 | 6 | 1 | 6 | 0 |
 | `momentum` | 5 | 26 | 3 | 1 | 0 | 0 |
 | `random_control` | 12 | 22 | 7 | 36 | 1 | 0 |
