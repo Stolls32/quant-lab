@@ -1,21 +1,21 @@
 # Quant Lab report
 
-_Updated 2026-11-03 02:35 UTC · paper money only._
+_Updated 2026-11-03 02:40 UTC · paper money only._
 
 ## Meme coins (Solana) — live paper trading
 
-Running **5.3 days** · 1,414 market checks · last check 2026-11-03T02:35:49Z · each bot started with $100.00
+Running **5.3 days** · 1,415 market checks · last check 2026-11-03T02:40:49Z · each bot started with $100.00
 
 > **Season 2.** All bots were reset with fresh paper money; gates and stats count this season only. Earlier seasons:
 > - Season 1: 2026-10-11 to 2026-10-28, $10 per bot; ended with `fresh_launch`, `momentum`, `random_control`, `volume_spike` out of money. Archived in `data/crypto/archive/season-1/`.
 
 | Bot | Equity | Return | Trades | Win % | Avg win / loss | Per-trade avg (95% CI) | Profit factor | Max DD | Open |
 |---|---:|---:|---:|---:|---|---|---:|---:|---:|
-| `dip_reclaim` | $100.25 | +0.3% | 11 | 55 | 12.2% / -12.5% | 1.0% (-6.9 to 8.6) | 1.17 | 11.7% | 1 |
+| `dip_reclaim` | $101.38 | +1.4% | 11 | 55 | 12.2% / -12.5% | 1.0% (-6.9 to 8.6) | 1.17 | 11.7% | 1 |
 | `claude_analyst` _(off: no API key)_ | $100.00 | +0.0% | 0 | – | – | – | – | 0.0% | 0 |
-| `hold_sol` | $89.58 | -10.4% | 0 | – | – | – | – | 11.8% | 1 |
-| `random_control` | $12.41 | -87.6% | 78 | 31 | 22.6% / -18.1% | -5.6% (-11.5 to 0.1) | 0.60 | 89.2% | 1 |
-| `volume_spike` | $1.37 | -98.6% | 32 | 16 | 18.2% / -20.4% | -14.4% (-21.9 to -7.0) | 0.12 | 98.9% | 1 |
+| `hold_sol` | $89.55 | -10.5% | 0 | – | – | – | – | 11.8% | 1 |
+| `random_control` | $13.31 | -86.7% | 78 | 31 | 22.6% / -18.1% | -5.6% (-11.5 to 0.1) | 0.60 | 89.2% | 1 |
+| `volume_spike` | $1.38 | -98.6% | 32 | 16 | 18.2% / -20.4% | -14.4% (-21.9 to -7.0) | 0.12 | 98.9% | 1 |
 | `momentum` | $0.46 | -99.5% | 35 | 20 | 36.7% / -30.6% | -17.2% (-26.8 to -6.6) | 0.31 | 99.5% | 0 |
 | `fresh_launch` | $0.01 | -100.0% | 33 | 33 | 53.3% / -61.1% | -23.0% (-44.1 to -0.8) | 0.44 | 100.0% | 0 |
 
