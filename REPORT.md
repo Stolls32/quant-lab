@@ -1,10 +1,10 @@
 # Quant Lab report
 
-_Updated 2026-11-04 10:48 UTC · paper money only._
+_Updated 2026-11-04 10:53 UTC · paper money only._
 
 ## Meme coins (Solana) — live paper trading
 
-Running **6.7 days** · 1,770 market checks · last check 2026-11-04T10:47:57Z · each bot started with $100.00
+Running **6.7 days** · 1,771 market checks · last check 2026-11-04T10:52:57Z · each bot started with $100.00
 
 > **Season 2.** All bots were reset with fresh paper money; gates and stats count this season only. Earlier seasons:
 > - Season 1: 2026-10-11 to 2026-10-28, $10 per bot; ended with `fresh_launch`, `momentum`, `random_control`, `volume_spike` out of money. Archived in `data/crypto/archive/season-1/`.
