@@ -1,10 +1,10 @@
 # Quant Lab report
 
-_Updated 2026-11-06 05:54 UTC · paper money only._
+_Updated 2026-11-06 05:59 UTC · paper money only._
 
 ## Meme coins (Solana) — live paper trading
 
-Running **8.5 days** · 2,239 market checks · last check 2026-11-06T05:54:39Z · each bot started with $100.00
+Running **8.5 days** · 2,240 market checks · last check 2026-11-06T05:59:39Z · each bot started with $100.00
 
 > **Season 2.** All bots were reset with fresh paper money; gates and stats count this season only. Earlier seasons:
 > - Season 1: 2026-10-11 to 2026-10-28, $10 per bot; ended with `fresh_launch`, `momentum`, `random_control`, `volume_spike` out of money. Archived in `data/crypto/archive/season-1/`.
@@ -12,8 +12,8 @@ Running **8.5 days** · 2,239 market checks · last check 2026-11-06T05:54:39Z �
 | Bot | Equity | Return | Trades | Win % | Avg win / loss | Per-trade avg (95% CI) | Profit factor | Max DD | Open |
 |---|---:|---:|---:|---:|---|---|---:|---:|---:|
 | `claude_analyst` _(off: no API key)_ | $100.00 | +0.0% | 0 | – | – | – | – | 0.0% | 0 |
-| `dip_reclaim` | $87.55 | -12.4% | 17 | 41 | 12.2% / -12.8% | -2.5% (-9.2 to 4.1) | 0.67 | 21.9% | 1 |
-| `hold_sol` | $86.81 | -13.2% | 0 | – | – | – | – | 14.0% | 1 |
+| `hold_sol` | $86.95 | -13.0% | 0 | – | – | – | – | 14.0% | 1 |
+| `dip_reclaim` | $86.93 | -13.1% | 17 | 41 | 12.2% / -12.8% | -2.5% (-9.2 to 4.1) | 0.67 | 21.9% | 1 |
 | `random_control` | $4.52 | -95.5% | 91 | 30 | 23.7% / -17.9% | -5.6% (-11.0 to -0.3) | 0.59 | 96.1% | 1 |
 | `volume_spike` | $0.87 | -99.1% | 52 | 29 | 20.8% / -20.7% | -8.7% (-15.0 to -2.1) | 0.14 | 99.4% | 0 |
 | `momentum` | $0.46 | -99.5% | 35 | 20 | 36.7% / -30.6% | -17.2% (-26.8 to -6.6) | 0.31 | 99.5% | 0 |
@@ -24,7 +24,7 @@ Running **8.5 days** · 2,239 market checks · last check 2026-11-06T05:54:39Z �
 | Bot | 100+ trades | 30+ days | Profitable | Profitable at 2x costs | Edge CI above 0 | Beats coin flip | Beats holding SOL | Drawdown < 40% | Verdict |
 |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|---|
 | `claude_analyst` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
-| `dip_reclaim` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ | collecting data |
+| `dip_reclaim` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | collecting data |
 | `volume_spike` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
 | `momentum` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
 | `fresh_launch` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
