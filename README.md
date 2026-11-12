@@ -23,6 +23,7 @@ changes when a bot "graduates" is where the orders go.
 - `lab/stocks/` — Alpaca data/broker client, 4 strategies + control + SPY benchmark, portfolio engine, backtester, live runner
 - `lab/ai.py` — Claude as a trade analyst (optional), with a journal that measures whether its scores predict anything
 - `lab/metrics.py` — bootstrap confidence intervals, permutation tests vs. the control, Sharpe/Sortino/drawdown
+- `lab/filings/` + `run_filings.py` — research pipeline: does what quietly changes in a small company's 10-K predict its stock? Downloads SEC filings, compares sections year over year, anonymizes, and has Claude score the changes. Research only, no trading yet (RESEARCH.md, Part 5)
 - `RESEARCH.md` — why each strategy exists, the evidence, and how each one fails. **Read this.**
 - `tests/` — 18 tests, including a no-look-ahead check on the backtester
 
@@ -72,6 +73,20 @@ That's it. Check **REPORT.md** in the repo any time. If GitHub ever shows a sche
 workflow as paused, click **Enable workflow**.
 
 ---
+
+## Filing-change research (phase 1)
+Needs `SEC_USER_AGENT` set to your name and email (the SEC requires it), and
+`ANTHROPIC_API_KEY` only for the `score` and `probe` steps.
+```bash
+export SEC_USER_AGENT="Your Name you@example.com"
+python run_filings.py universe --year 2022           # small caps by public float
+python run_filings.py build --year 2022 --sample 25  # download + compare 10-K pairs
+python run_filings.py cost                           # what scoring would cost
+python run_filings.py probe --n 20                   # leak test: can Claude name the company?
+python run_filings.py score --period development --max-calls 50
+```
+Results go to `data/filings/changes.csv`, `scores.csv` and `probe.csv`. Raw filings are
+cached in `data/filings/cache/`, which git ignores.
 
 ## Reading REPORT.md
 - **Leaderboard**: equity, return, win rate, average win vs. loss, and the per-trade
