@@ -107,6 +107,42 @@ def http_json(
     raise last_err
 
 
+def http_text(
+    url: str,
+    *,
+    headers: dict[str, str] | None = None,
+    timeout: float = 30,
+    retries: int = 3,
+    backoff: float = 1.5,
+    limiter: RateLimiter | None = None,
+) -> str:
+    """GET a text document (HTML, plain text) with the same retry rules as http_json."""
+    hdrs = {"User-Agent": "quant-lab/1.0"}
+    hdrs.update(headers or {})
+    last_err: Exception | None = None
+    for attempt in range(retries + 1):
+        if limiter:
+            limiter.wait()
+        req = urllib.request.Request(url, headers=hdrs)
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as resp:
+                raw = resp.read()
+                charset = resp.headers.get_content_charset() or "utf-8"
+                return raw.decode(charset, errors="replace")
+        except urllib.error.HTTPError as e:
+            text = e.read().decode(errors="replace")
+            last_err = HttpError(e.code, text, url)
+            if e.code == 429 or e.code >= 500:
+                time.sleep(backoff * (2**attempt) + random.random())
+                continue
+            raise last_err
+        except (urllib.error.URLError, TimeoutError, ConnectionError) as e:
+            last_err = e
+            time.sleep(backoff * (2**attempt) + random.random())
+    assert last_err is not None
+    raise last_err
+
+
 # ---------------------------------------------------------------------- files
 def load_json(path: str, default: Any) -> Any:
     try:

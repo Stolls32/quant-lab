@@ -113,3 +113,89 @@ better Sharpe than SPY and drawdown no worse.
 Expect most bots to fail. A clean "no edge" result is a real finding and saves you from
 losing actual money. If one does pass, the next step is small real money with an adult's
 account, and the gates keep running on the live results.
+
+---
+
+## Part 5 — Filing-change signal (pre-registered 2026-11-12, before any returns were looked at)
+
+**Hypothesis.** When a small, thinly covered company changes what its 10-K says about its
+risks, lawsuits, business or internal controls, the stock under-reacts, and the price keeps
+drifting for months afterwards. This builds on Cohen, Malloy & Nguyen, *"Lazy Prices"*
+(Journal of Finance, 2020), which found that companies whose annual reports change from one
+year to the next go on to underperform, and that the market doesn't price this in when the
+report comes out.
+
+**What's new here.** That paper measured *how much* the wording changed. An LLM can read
+*what* changed and judge whether it's bad: a new covenant waiver is not the same as a
+reworded cybersecurity paragraph that every company added that year. If Claude's score
+doesn't beat the word-overlap baseline, the LLM isn't worth paying for and we use the
+free baseline instead.
+
+**Why a small trader could have an edge here.** The universe is companies with a $10M–$300M
+public float. Big funds can't buy enough of them to matter, few analysts cover them, and
+very few people read their filings closely.
+
+**Pipeline** (`run_filings.py`, code in `lab/filings/`):
+1. Universe: public float from each 10-K's cover page, via SEC XBRL "frames". It's
+   point-in-time and includes companies that later went bankrupt, so the universe itself
+   has no survivorship bias. SPACs (SIC 6770) and commodity pools (SIC 6221) are excluded.
+2. Consecutive 10-K pairs filed 9–15 months apart.
+3. Sections compared: 1A Risk Factors, 3 Legal Proceedings, 7 MD&A, 9A Controls and
+   Procedures. A section is compared only if it was found in both years.
+4. Paragraph diff that ignores year bumps, quote styles, bullets, page footers and
+   financial-table rows. Other number changes still count (a customer going from 40% to
+   65% of revenue matters).
+5. Anonymize: company names (current and former), tickers, URLs and absolute years
+   are removed (years become relative: [FY+0], [FY-1]).
+6. Claude scores the changes from −5 to +5, with materiality (0–3) and tags.
+
+**Signals tested (fixed now):**
+- `cosine_all`: the "Lazy Prices" baseline, with no LLM. Lower means more change.
+- `llm_score`: Claude's −5 to +5 score.
+- Flag changes: going-concern and material-weakness language appearing or disappearing.
+
+**The test (fixed now):**
+- Entry: buy at the open on the 2nd trading day after the filing date. Exit: at the
+  close 63 trading days (about 3 months) later.
+- Main measure: within each filing season, the average market-adjusted return of the top
+  fifth of companies minus the bottom fifth, ranked by each signal. Long-only version:
+  the top fifth minus the whole universe (shorting small stocks is expensive or impossible).
+- Costs: 1% per round trip, because small stocks have wide bid-ask spreads.
+- Pass bar: the spread is positive with a t-statistic above 3 (the hurdle Harvey, Liu &
+  Zhu, *"...and the Cross-Section of Expected Returns"*, 2016, propose for new factors),
+  it's positive in both halves of the validation period, and the LLM score adds
+  significant information over `cosine_all` when both are in the same regression.
+
+**Periods (by filing date):**
+| Period | Dates | Use |
+|---|---|---|
+| development | 2012–2018 | Debug the pipeline and tune the payload and prompt. Returns may be looked at. |
+| validation | 2019 – June 2026 | Run once, after the design is frozen. No tuning afterwards. |
+| holdout | July 2026 onward | After the scoring model's training cutoff. The only fully clean test of the LLM score. The first big batch is the Feb–Apr 2027 10-K season. |
+
+Extraction was debugged on a sample of 2023 filings, which fall in the validation period.
+No returns were looked at.
+
+**Known problems and how they're handled:**
+1. *The model may know the future.* Claude was trained on text written after most of these
+   filings. Anonymization lowers the risk, and the recognition probe (`run_filings.py
+   probe`) measures it: if the model names the company in more than about 10% of probes,
+   treat pre-cutoff LLM results as untrustworthy and rely on the holdout.
+2. *Era clues.* Mentions of COVID or a specific law reveal the year even with dates masked,
+   and the model knows how markets went in that year. The probe reports how far off its
+   year guesses are.
+3. *Prices for companies that no longer exist.* Free price feeds mostly drop delisted
+   stocks, but failing companies are exactly where this signal should work best. Phase 2
+   has to find prices for delisted companies, or the backtest will be too optimistic.
+4. *Smaller reporting companies may omit Item 1A* ("not required"). Those pairs are compared
+   on the other sections only.
+5. *Heading parsing is heuristic.* Check `sections_found` in `changes.csv` and spot-check
+   payloads before trusting a large run.
+
+**Sample run, 2026-11-12:** 30 random companies from the mid-2022 universe of 1,881. After
+removing SPACs, commodity pools and companies without a consecutive 10-K, 20 pairs were
+usable, and 19 of them had all four sections. The cheap flags alone caught real events:
+one company's going-concern doubt appeared, and another's material weakness and
+going-concern language both disappeared ("were not effective" became "are effective").
+Scoring cost estimate: about $0.002 per pair with Haiku 5.5 (about 16K input tokens), so
+roughly $3.50 for a full year of the universe, or half that with the Batch API.
