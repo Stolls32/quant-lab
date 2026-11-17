@@ -1,10 +1,10 @@
 # Quant Lab report
 
-_Updated 2026-11-17 15:17 UTC · paper money only._
+_Updated 2026-11-17 15:22 UTC · paper money only._
 
 ## Meme coins (Solana) — live paper trading
 
-Running **19.9 days** · 4,932 market checks · last check 2026-11-17T15:17:16Z · each bot started with $100.00
+Running **19.9 days** · 4,933 market checks · last check 2026-11-17T15:22:16Z · each bot started with $100.00
 
 > **Season 2.** All bots were reset with fresh paper money; gates and stats count this season only. Earlier seasons:
 > - Season 1: 2026-10-11 to 2026-10-28, $10 per bot; ended with `fresh_launch`, `momentum`, `random_control`, `volume_spike` out of money. Archived in `data/crypto/archive/season-1/`.
@@ -12,8 +12,8 @@ Running **19.9 days** · 4,932 market checks · last check 2026-11-17T15:17:16Z 
 | Bot | Equity | Return | Trades | Win % | Avg win / loss | Per-trade avg (95% CI) | Profit factor | Max DD | Open |
 |---|---:|---:|---:|---:|---|---|---:|---:|---:|
 | `claude_analyst` _(off: no API key)_ | $100.00 | +0.0% | 0 | – | – | – | – | 0.0% | 0 |
-| `dip_reclaim` | $74.42 | -25.6% | 32 | 38 | 11.6% / -11.6% | -2.9% (-7.5 to 1.6) | 0.60 | 31.8% | 1 |
-| `hold_sol` | $71.16 | -28.8% | 0 | – | – | – | – | 32.0% | 1 |
+| `dip_reclaim` | $77.81 | -22.2% | 33 | 39 | 12.1% / -11.6% | -2.3% (-6.9 to 2.2) | 0.68 | 31.8% | 0 |
+| `hold_sol` | $71.58 | -28.4% | 0 | – | – | – | – | 32.0% | 1 |
 | `momentum` | $0.46 | -99.5% | 35 | 20 | 36.7% / -30.6% | -17.2% (-26.8 to -6.6) | 0.31 | 99.5% | 0 |
 | `volume_spike` | $0.39 | -99.6% | 54 | 28 | 20.8% / -21.3% | -9.6% (-15.9 to -3.2) | 0.14 | 99.6% | 0 |
 | `random_control` | $0.38 | -99.6% | 106 | 28 | 22.7% / -18.4% | -6.8% (-11.4 to -1.9) | 0.58 | 99.7% | 0 |
@@ -35,7 +35,7 @@ _Coin-flip test = permutation test of per-trade returns vs. `random_control` (sa
 
 | Bot | take_profit | stop_loss | trailing_stop | time_exit | liquidity_pulled | vanished |
 |---|---:|---:|---:|---:|---:|---:|
-| `dip_reclaim` | 9 | 10 | 11 | 2 | 0 | 0 |
+| `dip_reclaim` | 10 | 10 | 11 | 2 | 0 | 0 |
 | `fresh_launch` | 6 | 14 | 6 | 1 | 6 | 0 |
 | `momentum` | 5 | 26 | 3 | 1 | 0 | 0 |
 | `random_control` | 15 | 33 | 8 | 49 | 1 | 0 |
