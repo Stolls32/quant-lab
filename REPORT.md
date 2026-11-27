@@ -1,10 +1,10 @@
 # Quant Lab report
 
-_Updated 2026-11-27 18:35 UTC · paper money only._
+_Updated 2026-11-27 18:40 UTC · paper money only._
 
 ## Meme coins (Solana) — live paper trading
 
-Running **30.0 days** · 7,018 market checks · last check 2026-11-27T18:35:07Z · each bot started with $100.00
+Running **30.0 days** · 7,019 market checks · last check 2026-11-27T18:40:07Z · each bot started with $100.00
 
 > **Season 2.** All bots were reset with fresh paper money; gates and stats count this season only. Earlier seasons:
 > - Season 1: 2026-10-11 to 2026-10-28, $10 per bot; ended with `fresh_launch`, `momentum`, `random_control`, `volume_spike` out of money. Archived in `data/crypto/archive/season-1/`.
@@ -23,11 +23,11 @@ Running **30.0 days** · 7,018 market checks · last check 2026-11-27T18:35:07Z 
 
 | Bot | 100+ trades | 30+ days | Profitable | Profitable at 2x costs | Edge CI above 0 | Beats coin flip | Beats holding SOL | Drawdown < 40% | Verdict |
 |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|---|
-| `claude_analyst` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
-| `dip_reclaim` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ | collecting data |
-| `momentum` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
-| `volume_spike` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
-| `fresh_launch` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
+| `claude_analyst` | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
+| `dip_reclaim` | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ | collecting data |
+| `momentum` | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
+| `volume_spike` | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
+| `fresh_launch` | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | collecting data |
 
 _Coin-flip test = permutation test of per-trade returns vs. `random_control` (same tokens, exits and size, random entries). ✅ needs p < 0.010: 0.05 split across the 5 bots being tested, so one lucky bot out of several doesn't count as proof._
 
